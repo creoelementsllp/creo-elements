@@ -1,0 +1,43 @@
+import React from 'react';
+import './WavyText.css'; // External CSS file for styles
+
+const WavyText = ({ children, fontSize }) => {
+  const dynamicFontSize = fontSize || '6rem';
+
+  const dynamicStyle = {
+    fontSize: dynamicFontSize,
+  };
+
+  // Split based on <br> tags (using JSX)
+  const lines = React.Children.toArray(children).filter((child) => {
+    return typeof child === 'string' || child.type === 'br';
+  }).reduce((acc, child) => {
+    if (typeof child === 'string') {
+      acc.push(...child.split('<br>'));
+    } else {
+      acc.push(child);
+    }
+    return acc;
+  }, []);
+
+  return (
+    <div className="text-animation">
+      <div className="text-wrapper">
+        {lines.map((line, index) => (
+          <div
+            key={index}
+            className="wave-container"
+            style={{
+              height: `calc(${dynamicFontSize} + 10px)`, // Adjust height dynamically for each line
+            }}
+          >
+            <h2 style={dynamicStyle}>{line}</h2>
+            <h2 style={dynamicStyle}>{line}</h2>
+          </div>
+        ))}
+      </div>
+    </div>
+  );
+};
+
+export default WavyText;

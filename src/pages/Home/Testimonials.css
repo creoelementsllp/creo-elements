@@ -1,0 +1,102 @@
+.testimonials-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    top: 25% !important;
+    z-index: 4;
+    position: relative;
+    height: 100vh;
+    background-color: #3eb8a2;
+}
+
+
+
+.testimonials-container .swiper {
+    width: 100%;
+    height: 100%;
+  }
+  
+  
+.testimonials-container .swiper-slide {
+    text-align: center;
+    font-size: 18px;
+  
+    /* Center slide text vertically */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  
+.testimonials-container .swiper-slide img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  
+
+  
+.testimonials-container .testimonials-wrapper {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.testimonials-container .left-side-test {
+    width: calc(50% - 20px);
+    height: calc(100% - 20px);
+    border: 10px solid #3eb8a2;
+    box-shadow: inset 0px 0px 20px 2px #000000;
+    background-color: #242424;
+}
+
+
+.testimonials-container .right-side-test {
+    width: 50%;
+    height: 100%;
+    padding-right: 40px;
+    background-color: #3eb8a2;
+}
+
+
+.testimonials-container .swiper-slide.swiper-slide-active img {
+    height: 50%;
+    z-index: 3;
+    filter: none;
+    background-color: white;
+}
+
+.testimonials-container .swiper-slide img {
+    height: 30%;
+    width: auto;
+    object-fit: contain;
+    background-color: rgba(255, 255, 255, 0);
+    box-shadow: 0px 0px 20px 0px grey;
+    filter: grayscale(1);
+    transition: all 0.5s ease-in-out;
+}
+
+
+
+.testimonials-container .right-side-test .swiper-slide {
+    display: flex;
+    flex-direction: column;
+}
+
+
+.testimonials-container .testimonial-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 50px;
+    color: white;
+}

@@ -1,0 +1,104 @@
+{
+    "directory_structure.json": "",
+    "eslint.config.js": "",
+    "index.html": "",
+    "package.json": "",
+    "public": {
+        "images": {}
+    },
+    "src": {
+        "App.css": "",
+        "App.jsx": "",
+        "assets": {
+            "fonts": {
+                "sukar.woff": ""
+            },
+            "images": {
+                "branding.webp": "",
+                "digital-marketing.webp": "",
+                "frame.webp": "",
+                "gifting-solutions.webp": "",
+                "logo.png": "",
+                "Naeem-Sir-1.webp": "",
+                "packaging.webp": "",
+                "photography.webp": "",
+                "pr.webp": "",
+                "print-solutions.webp": "",
+                "road.webp": "",
+                "seo.webp": "",
+                "social-media.webp": "",
+                "target-marketing.webp": "",
+                "web-design.webp": ""
+            }
+        },
+        "components": {
+            "Cursor.css": "",
+            "Cursor.jsx": "",
+            "elements": {
+                "CreoLogo.jsx": "",
+                "WavyText.css": "",
+                "WavyText.jsx": ""
+            },
+            "Footer.css": "",
+            "Footer.jsx": "",
+            "Grids.css": "",
+            "Grids.jsx": "",
+            "Header.css": "",
+            "Header.jsx": "",
+            "TransitionWrapper.css": "",
+            "TransitionWrapper.jsx": ""
+        },
+        "helpers": {
+            "db": {
+                "db.jsx": ""
+            },
+            "mailer": {},
+            "scripts": {
+                "fileManager.jsx": ""
+            }
+        },
+        "index.css": "",
+        "main.jsx": "",
+        "pages": {
+            "Blogs": {
+                "Blog.jsx": "",
+                "BlogDetail.jsx": "",
+                "Blogs.css": "",
+                "Blogs.jsx": "",
+                "data.json": ""
+            },
+            "Contact Us": {
+                "ContactUs.css": "",
+                "ContactUs.jsx": ""
+            },
+            "Home": {
+                "About.css": "",
+                "Banner.css": "",
+                "BannerMobile.jsx": "",
+                "Clients.css": "",
+                "Clients.jsx": "",
+                "Home.css": "",
+                "Home.jsx": "",
+                "Partners.css": "",
+                "Service.css": "",
+                "Service.jsx": "",
+                "ServiceMobile.jsx": "",
+                "ServicesMobile.jsx": "",
+                "Testimonails2.json": "",
+                "Testimonials.css": "",
+                "Testimonials.json": "",
+                "Threesixty.css": "",
+                "Threesixty.jsx": ""
+            },
+            "Services": {
+                "Service.css": "",
+                "Service.jsx": ""
+            },
+            "Work With Us": {
+                "WorkWithUs.css": "",
+                "WorkWithUS.jsx": ""
+            }
+        }
+    },
+    "vite.config.js": ""
+}

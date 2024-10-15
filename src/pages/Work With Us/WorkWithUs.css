@@ -1,0 +1,11 @@
+.work-with-us-page {
+    min-height: 100vh;
+    background-color: #242424;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.work-with-us-page-wrapper{
+    width: 75%;
+}
