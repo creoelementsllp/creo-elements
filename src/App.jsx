@@ -9,7 +9,7 @@ import Cursor from './components/Cursor';
 import {Service} from './pages/Services/Service';
 import { CreoLogo } from './components/elements/CreoLogo';
 import { WorkWithUS } from './pages/Work With Us/WorkWithUS';
-import { ContactUS } from './pages/Contact Us/ContactUS';
+import { ContactUS } from '/src/pages/Contact Us/ContactUs.jsx';
 import { Blogs } from './pages/Blogs/Blogs'
 import { BlogDetail } from './pages/Blogs/BlogDetail'; // Import your BlogDetail component
 
