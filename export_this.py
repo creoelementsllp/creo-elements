@@ -20,7 +20,8 @@ def get_directory_structure(root_dir, ignore_list):
             # If it's a file, read the content and store it with utf-8 encoding
             try:
                 with open(item_path, 'r', encoding='utf-8') as file:
-                    directory_structure[item] = ''
+                    # directory_structure[item] = ''
+                    directory_structure[item] = file.read()
             except UnicodeDecodeError:
                 # Handle files that cannot be decoded with utf-8
                 directory_structure[item] = "Unable to decode file with utf-8 encoding."
@@ -28,7 +29,7 @@ def get_directory_structure(root_dir, ignore_list):
     return directory_structure
 
 # Specify the directory you want to scan
-root_directory = r'C:\Users\vinay\OneDrive\Desktop\React Trials\creo-elements'
+root_directory = r'C:\Users\vinay\OneDrive\Desktop\React Trials\creo-elements\src\pages\blogs'
 
 # Get the directory structure
 result = get_directory_structure(root_directory, ignore_list)
