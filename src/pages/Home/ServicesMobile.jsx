@@ -18,7 +18,7 @@ export const ServicesrMobile  = () => {
                 <Service
                     title="Mobile Social Media"
                     description="In today's digital world, social media is a powerful tool for brands to connect with customers, build brand awareness, and drive sales. But managing a successful social media presence requires more than just posting occasionally. This is where social media services for brands come in."
-                    image="src\assets\images\social-media.webp"
+                    image="/images/social-media.webp"
                     link="/services/web-development"
                     id="social-media"
                 />
@@ -27,14 +27,14 @@ export const ServicesrMobile  = () => {
                 <Service
                     title="Social Media"
                     description="In today's digital world, social media is a powerful tool for brands to connect with customers, build brand awareness, and drive sales. But managing a successful social media presence requires more than just posting occasionally. This is where social media services for brands come in."
-                    image="src\assets\images\social-media.webp"
+                    image="/images/social-media.webp"
                     link="/services/web-development"
                     id="web-design"
                 />
                 <Service
                     title="Social Media"
                     description="In today's digital world, social media is a powerful tool for brands to connect with customers, build brand awareness, and drive sales. But managing a successful social media presence requires more than just posting occasionally. This is where social media services for brands come in."
-                    image="src\assets\images\social-media.webp"
+                    image="/images/social-media.webp"
                     link="/services/web-development"
                     id="social-media"
                 />
@@ -43,7 +43,7 @@ export const ServicesrMobile  = () => {
                 <Service
                     title="Social Media"
                     description="In today's digital world, social media is a powerful tool for brands to connect with customers, build brand awareness, and drive sales. But managing a successful social media presence requires more than just posting occasionally. This is where social media services for brands come in."
-                    image="src\assets\images\social-media.webp"
+                    image="/images/social-media.webp"
                     link="/services/web-development"
                     id="web-design"
                 />
