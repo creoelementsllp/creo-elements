@@ -6,7 +6,7 @@
     position: relative;
     color: white;
     overflow: hidden;
-    background-image: url(src/assets/images/road.webp);
+    background-image: url(/images/road.webp);
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
