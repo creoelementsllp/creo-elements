@@ -4,11 +4,11 @@
 }
 
 .member-image img {
-    height: 200px;
+    height: 150px;
 }
 
 .member {
-    width: 30%;
+    width: 45%;
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -21,8 +21,14 @@
     flex-direction: row;
     flex-wrap: wrap;
     align-items: flex-start;
-    justify-content: center;
+    justify-content: space-between;
+    row-gap: 50px;
+    padding-bottom: 50px;
+    padding-top: 50px;
+    padding-right: 7.5vw;
+    padding-left: 7.5vw;
 }
+
 .ourteam-header {
     display: flex;
     justify-content: center;
@@ -35,4 +41,28 @@
 .ourteam-header h2 {
     font-size: inherit;
     font-weight: inherit;
+}
+
+.member-name-detail {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    padding-left: 10px;
+}
+
+.member-name {
+    font-size: 2rem;
+    color: #3eb8a2;
+    text-decoration: underline;
+}
+
+.designation {
+    font-size: 1rem;
+    color: white;
+}
+
+.member-description {
+    width: 85%;
+    font-weight: 300;
+    color: white;
 }

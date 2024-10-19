@@ -1,9 +1,9 @@
-// Blogs.jsx
 import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import WavyText from '../../components/elements/WavyText';
+import { Grids } from '../../components/Grids';
 import './Blogs.css';
-import { Blogcard } from './Blogcard'
+import { Blogcard } from './Blogcard';
 
 export const Blogs = () => {
   const [posts, setPosts] = useState([]);
@@ -12,7 +12,7 @@ export const Blogs = () => {
   useEffect(() => {
     const fetchPosts = async () => {
       try {
-        const response = await fetch('https://backend.creo-elements.com/wp-json/wp/v2/posts');
+        const response = await fetch('https://backend.creo-elements.com/reactblog/');
         const data = await response.json();
         setPosts(data);
       } catch (error) {
@@ -26,11 +26,22 @@ export const Blogs = () => {
   }, []);
 
   if (loading) {
-    return <div>Loading...</div>;
+    return (
+      <div className='blogs-page'>
+        <Grids className='grid-1' />
+        <div className='blogs-page-wrapper z-2'>
+          <WavyText fontSize="8rem">Blogs</WavyText>
+          <div className="blog-grid">
+            Loading...
+          </div>
+        </div>
+      </div>
+    );
   }
 
   return (
     <div className='blogs-page'>
+      <Grids className='grid-1' />
       <div className='blogs-page-wrapper z-2'>
         <WavyText fontSize="8rem">Blogs</WavyText>
         <div className="blog-grid">
@@ -38,9 +49,9 @@ export const Blogs = () => {
             <Blogcard
               key={post.id}
               id={post.id}
-              title={post.title.rendered}
-              content={post.excerpt.rendered}
-              featuredImage={post.featured_media}
+              title={post.title} // Adjusted to match your JSON
+              content={post.acf_fields.blog_content} // Using ACF field
+              featuredImage={post.acf_fields.featured_image} // Adjusted to your ACF featured image URL
             />
           ))}
         </div>

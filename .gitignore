@@ -26,3 +26,4 @@ dist-ssr
 # Extra python files
 directory_structure.json
 export_this.py
+dist

@@ -1,4 +1,3 @@
-// BlogDetail.jsx
 import React, { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
 
@@ -31,10 +30,14 @@ export const BlogDetail = () => {
     return <div>Blog post not found!</div>;
   }
 
+  // Adjust how you render if you're using custom ACF fields
+  const { title, content } = blogPost;
+  const acfContent = blogPost.acf ? blogPost.acf.blog_content : content.rendered;
+
   return (
     <div className="blog-detail">
-      <h1 dangerouslySetInnerHTML={{ __html: blogPost.title.rendered }} />
-      <div dangerouslySetInnerHTML={{ __html: blogPost.content.rendered }} />
+      <h1 dangerouslySetInnerHTML={{ __html: title.rendered }} />
+      <div dangerouslySetInnerHTML={{ __html: acfContent }} />
     </div>
   );
 };

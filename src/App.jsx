@@ -12,6 +12,7 @@ import { WorkWithUS } from './pages/Work With Us/WorkWithUS';
 import { ContactUS } from '/src/pages/Contact Us/ContactUs.jsx';
 import { Blogs } from './pages/Blogs/Blogs'
 import { BlogDetail } from './pages/Blogs/BlogDetail'; // Import your BlogDetail component
+import { Member } from './pages/Team/Member'
 
 
 
@@ -52,6 +53,7 @@ function App() {
         <Route path="/blog/:blogId" element={<BlogDetail />} />
         {/* Updated route to use serviceSlug */}
         <Route path="/services/:serviceSlug" element={<Service />} />
+        <Route path="/team/:memberSlug" element={<Member />} /> {/* Dynamic route */}
       </Routes>
       <Footer />
     </div>
