@@ -131,7 +131,7 @@ export const Services = () => {
                         </div>
                         <div
                             className="service-description"
-                            style={{ fontSize: activeService === index ? "1.25rem" : "0rem" }}
+                            style={{ fontSize: activeService === index ? "1rem" : "0rem" }}
                         >
                             {service.description}
                         </div>

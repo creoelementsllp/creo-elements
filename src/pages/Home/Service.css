@@ -18,7 +18,7 @@
     flex-direction: row;
     justify-content: flex-start;
     width: 85%;
-    height: 80vh;
+    height: 70vh;
     overflow-x: hidden;
 }
 
@@ -51,20 +51,22 @@
     display: flex;
     background-color: transparent;
     justify-content: flex-start;
-    align-items: flex-start;
+    align-items: center;
     color: white;
     box-shadow: none;
 }
 
 .service.active .service-image img {
-    height: 12rem;
+    height: 15rem;
 }
 
 .service.active .service-title {
     writing-mode: horizontal-tb;
-    font-size: 4rem;
+    font-size: 2rem;
 }
-
+.service-description {
+    text-align: center;
+}
 
 @media screen and (max-width: 825px) {
     .services {

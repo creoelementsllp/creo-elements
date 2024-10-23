@@ -66,7 +66,7 @@
   }
   
   .accordion {
-    background: linear-gradient(200deg, rgb(29, 145, 252) 13.57%, rgb(90, 54, 192) 98.38%);
+    background: linear-gradient(200deg, #3eb8a2 13.57%, #4C774F 98.38%);
     width: max(50vw, 280px);
     padding: 25px 30px 10px;
     border-radius: 15px;
@@ -75,15 +75,15 @@
   }
   
   .accordion:nth-child(2) {
-    background: linear-gradient(200deg, rgb(242, 136, 133) 13.57%, rgb(233, 79, 102) 98.38%);
+    background: linear-gradient(200deg,#01949A 13.57%, #004369 98.38%);
   }
   
   .accordion:nth-child(3) {
-    background: linear-gradient(200deg, rgb(101, 187, 118) 13.57%, rgb(70, 111, 171) 98.38%);
+    background: linear-gradient(200deg, #093F2D 13.57%,#905FD0 98.38%);
   }
   
   .accordion:nth-child(4) {
-    background: linear-gradient(200deg, #c215d1 13.57%, #9813a1 98.38%);
+    background: linear-gradient(200deg, #905FD0 13.57%, #DB1F48 98.38%);
     padding-bottom: 0vh !important;
   }
   
