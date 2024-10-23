@@ -1,5 +1,8 @@
 import React, { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
+import WavyText from '../../components/elements/WavyText';
+import { Grids } from '../../components/Grids';
+import './Blogs.css'
 
 export const BlogDetail = () => {
   const { blogId } = useParams();
@@ -9,9 +12,15 @@ export const BlogDetail = () => {
   useEffect(() => {
     const fetchPostDetail = async () => {
       try {
-        const response = await fetch(`https://backend.creo-elements.com/wp-json/wp/v2/posts/${blogId}`);
+        const response = await fetch(`https://backend.creo-elements.com/reactblog/`);
+        if (!response.ok) {
+          throw new Error('Network response was not ok');
+        }
         const data = await response.json();
-        setBlogPost(data);
+        
+        // Find the specific post using the blogId
+        const post = data.find(item => item.id === parseInt(blogId));
+        setBlogPost(post);
       } catch (error) {
         console.error('Error fetching blog post:', error);
       } finally {
@@ -30,14 +39,24 @@ export const BlogDetail = () => {
     return <div>Blog post not found!</div>;
   }
 
-  // Adjust how you render if you're using custom ACF fields
-  const { title, content } = blogPost;
-  const acfContent = blogPost.acf ? blogPost.acf.blog_content : content.rendered;
+  // Extracting data from the blogPost object
+  const { title, acf_fields, yoast_meta, link } = blogPost;
 
   return (
     <div className="blog-detail">
-      <h1 dangerouslySetInnerHTML={{ __html: title.rendered }} />
-      <div dangerouslySetInnerHTML={{ __html: acfContent }} />
+      
+      <Grids className='grid-1' />
+      <div className='z-2 blog-page-wrapper'>
+      <WavyText fontSize="8rem">
+      { title }
+      </WavyText>
+      <div dangerouslySetInnerHTML={{ __html: acf_fields.blog_content }} />
+      
+      {acf_fields.featured_image && (
+        <img src={acf_fields.featured_image} alt={title} />
+      )}
+
+      </div>
     </div>
   );
 };

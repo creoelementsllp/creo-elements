@@ -43,7 +43,9 @@ export const Blogs = () => {
     <div className='blogs-page'>
       <Grids className='grid-1' />
       <div className='blogs-page-wrapper z-2'>
+      <div className="blogs-heading">
         <WavyText fontSize="8rem">Blogs</WavyText>
+        </div>
         <div className="blog-grid">
           {posts.map((post) => (
             <Blogcard

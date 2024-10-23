@@ -66,6 +66,9 @@
     color: white;
     font-size: 2rem;
     font-family: 'Poppins';
+    width: 75%;
+    margin: auto;
+    text-align: center;
 }
 
 .firstswiper-wrapper {
@@ -81,4 +84,49 @@
 .clients-container-wrapper {
     height: fit-content;
     width: 75%;
+}
+
+.clients-swiper-wrapper img {
+  height: 100%;
+  width: 100%;
+  object-fit: contain;
+}
+.clients-swiper-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+
+@media screen and (max-width: 768px) {
+  .testimonials-container .testimonials-wrapper {
+    display: flex;
+    flex-direction: column;
+}
+
+
+.clients-container-wrapper {
+  height: fit-content;
+  width: 100%;
+}
+.testimonials-container .left-side-test {
+    width: 100%;
+    height: 50%;
+}
+
+.testimonials-container .right-side-test {
+    width: 100%;
+    height: 50%;
+    padding: 0px;
+}
+
+.testimonials-container .testimonial-content p {
+    font-size: 1rem !important;
+}
+
+.testimonials-container .testimonial-content {
+    padding: 20px;
+    height: 100%;
+    overflow-y: scroll;
+}
 }

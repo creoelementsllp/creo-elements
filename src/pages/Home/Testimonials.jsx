@@ -42,7 +42,7 @@ export const Testimonials = () => {
     }, [swiper1Ref.current, swiper2Ref.current]);
 
     return (
-        <div className="testimonials-container">
+        <div className="testimonials-container full-width">
 
 
 

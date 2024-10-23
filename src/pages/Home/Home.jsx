@@ -5,7 +5,6 @@ import { BannerMobile } from './BannerMobile';
 import { Threesixty } from './Threesixty';
 import { About } from './About';
 import { Services } from './Services';
-import { ServicesrMobile  } from './ServicesMobile';
 import { Testimonials } from './Testimonials';
 import { Clients } from './Clients';
 import { Partners } from './Partners';
@@ -25,7 +24,7 @@ function Home({ updaters }) {
       {isMobile ? <BannerMobile /> : <Banner updaters={updaters} />}
       <Threesixty />
       <About />
-      {isMobile ? <ServicesrMobile  /> : <Services/>}
+      <Services/>
       <Testimonials />
       <Clients />
       <Partners />

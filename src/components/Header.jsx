@@ -68,7 +68,7 @@ export const Header = () => {
           <Link to="/work-with-us" className="clickable">Work With Us</Link>
         </li>
         <li className="menu-items">
-          <Link to="/#clients" className="clickable">Our Clients</Link>
+          <Link to="/clients" className="clickable">Our Clients</Link>
         </li>
         <li className="menu-items">
           <Link to="contact-us" className="clickable">Contact Us</Link>

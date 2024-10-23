@@ -1,0 +1,16 @@
+.client-banner.z-2 {
+    min-height: 80vh;
+    display: flex;
+    align-items: center;
+    padding-left: 7.5vw;
+    padding-right: 7.5vw;
+    /* background-color: #242424; */
+}
+
+.clients-page {
+    background: #242424;
+}
+
+.clients-page div#clients {
+    background-color: transparent !important;
+}

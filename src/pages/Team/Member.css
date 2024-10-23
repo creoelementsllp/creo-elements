@@ -1,0 +1,32 @@
+.member-wrapper.z-2 {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 75%;
+}
+
+.member-page {
+    display: flex;
+    justify-content: center;
+    background-color: #242424;
+}
+
+.member-image {
+    width: 30%;
+}
+
+.member-content {
+    width: 70%;
+    padding-left: 50px;
+    color: white;
+}
+
+.member-content h1 {
+    font-size: 4rem;
+}
+
+.member-page .member-image img {
+    width: 100%;
+    height: auto;
+}

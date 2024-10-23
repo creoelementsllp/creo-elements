@@ -1,14 +1,23 @@
-import React from 'react'
+import React, { useState, useEffect } from 'react'
 import { Grids } from '../../components/Grids'
 import './Banner.css'
 import WavyText from '../../components/elements/WavyText'
 
 export const Banner = () => {
+  const [isMobile, setIsMobile] = useState(window.innerWidth < 768);
+
+  useEffect(() => {
+    const handleResize = () => setIsMobile(window.innerWidth < 768);
+    window.addEventListener('resize', handleResize);
+    
+    return () => window.removeEventListener('resize', handleResize);
+  }, []);
   return (
     <div className='banner z-2'>
       <div className='about-wrapper'>
         <h1> 
-        <WavyText fontSize="8rem">About Us</WavyText>
+        
+        {isMobile ? <WavyText fontSize="3rem">About Us</WavyText> : <WavyText fontSize="8rem">About Us</WavyText>}
         </h1>
         <div className='about-us'>
           Creo Elements is your one-stop shop for all things digital marketing. We help businesses of all sizes to achieve success in the ever-evolving online world. Our comprehensive suite of services helps you build a strong brand presence and drive results.

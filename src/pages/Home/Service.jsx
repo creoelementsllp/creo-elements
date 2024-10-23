@@ -60,8 +60,8 @@ export const Service = ({ title, description, image, link, id }) => {
     return (
         <div ref={serviceRef} id={id} className="service">
             <div className="left" ref={leftRef}>
-                <div className='service-text'>
-                    <a href={link}>
+                <div className='service-text clickable'>
+                    <a href={link} style={{color: "#3eb8a2"}}>
                         <h1>{title}</h1>
                     </a>
                     <p>{description}</p>

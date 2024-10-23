@@ -5,7 +5,15 @@
     align-items: center;
     justify-content: center;
 }
-
+/* body{
+  background-color: #242424;
+} */
+.blogs-heading {
+  min-height: 80vh;
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+}
 .blogs-page-wrapper{
     width: 75%;
 }

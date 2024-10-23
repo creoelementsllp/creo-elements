@@ -2,7 +2,7 @@ import os
 import json
 
 # Define the list of files and folders to ignore
-ignore_list = ['node_modules', 'package-lock.json', '.gitignore', 'export_this.py', 'README.md', 'LICENSE', 'vite.svg', 'react.svg', 'About', 'About.jsx', 'Banner.jsx', 'Partners.jsx', 'Services.jsx', 'Testimonials.jsx']
+ignore_list = []
 
 def get_directory_structure(root_dir, ignore_list):
     directory_structure = {}
@@ -29,7 +29,7 @@ def get_directory_structure(root_dir, ignore_list):
     return directory_structure
 
 # Specify the directory you want to scan
-root_directory = r'C:\Users\vinay\OneDrive\Desktop\React Trials\creo-elements\src\pages\blogs'
+root_directory = r'C:\Users\vinay\OneDrive\Desktop\React Trials\creo-elements\src\pages'
 
 # Get the directory structure
 result = get_directory_structure(root_directory, ignore_list)

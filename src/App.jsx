@@ -13,6 +13,7 @@ import { ContactUS } from '/src/pages/Contact Us/ContactUs.jsx';
 import { Blogs } from './pages/Blogs/Blogs'
 import { BlogDetail } from './pages/Blogs/BlogDetail'; // Import your BlogDetail component
 import { Member } from './pages/Team/Member'
+import { ClientPage } from './pages/Clients/Clients'
 
 
 
@@ -50,6 +51,7 @@ function App() {
         <Route path="/work-with-us" element={<WorkWithUS />} />
         <Route path="/contact-us" element={<ContactUS />} />
         <Route path="/blog" element={<Blogs />} />
+        <Route path="/clients" element={<ClientPage />} />
         <Route path="/blog/:blogId" element={<BlogDetail />} />
         {/* Updated route to use serviceSlug */}
         <Route path="/services/:serviceSlug" element={<Service />} />
