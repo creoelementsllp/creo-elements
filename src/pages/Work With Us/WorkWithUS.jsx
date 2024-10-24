@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { Grids } from '../../components/Grids';
 import WavyText from '../../components/elements/WavyText';
 import './WorkWithUs.css';
@@ -62,6 +62,17 @@ export const WorkWithUS = () => {
         }
     };
 
+
+
+    const [isMobile, setIsMobile] = useState(window.innerWidth < 768);
+
+    useEffect(() => {
+      const handleResize = () => setIsMobile(window.innerWidth < 768);
+      window.addEventListener('resize', handleResize);
+      
+      return () => window.removeEventListener('resize', handleResize);
+    }, []);
+  
     return (
         <div>
             <div className='contact-page'>
@@ -69,7 +80,8 @@ export const WorkWithUS = () => {
 
                 <div className='contact-page-wrapper z-2'>
                     <div className="page-title">
-                        <WavyText fontSize="8rem">Work With Us</WavyText>
+                    {isMobile? <WavyText fontSize="3rem" text="Work With <br>Us" /> : <WavyText fontSize="8rem">Work With Us</WavyText>}
+                        
                     </div>
                     <form onSubmit={handleSubmit} className="contact-form">
                         <label htmlFor="name">Hello my name is</label>

@@ -54,7 +54,8 @@ function App() {
 
   return (
     <div>
-      <Cursor />
+      
+      {isMobile? '': <Cursor /> }
       {isMobile? '': <CreoLogo /> }
       {/* {location.pathname !== "/" && <CreoLogo />} */}
       {isMobile ? <HeaderMobile /> : <Header />}

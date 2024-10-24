@@ -1,15 +1,18 @@
 import React from 'react';
 import './WavyText.css'; // External CSS file for styles
 
-const WavyText = ({ children, fontSize }) => {
+const WavyText = ({ children, text, fontSize }) => {
   const dynamicFontSize = fontSize || '6rem';
 
   const dynamicStyle = {
     fontSize: dynamicFontSize,
   };
 
+  // Determine the text source: from props or children
+  const content = text || children;
+
   // Split based on <br> tags (using JSX)
-  const lines = React.Children.toArray(children).filter((child) => {
+  const lines = React.Children.toArray(content).filter((child) => {
     return typeof child === 'string' || child.type === 'br';
   }).reduce((acc, child) => {
     if (typeof child === 'string') {
