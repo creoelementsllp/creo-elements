@@ -1,8 +1,9 @@
-import React, { useEffect } from 'react';
+import React, { useEffect , useState } from 'react';
 import { BrowserRouter as Router, Routes, Route, useLocation } from 'react-router-dom';
 import Home from './pages/Home/Home';
 import About from './pages/About/About';
 import { Header } from './components/Header';
+import { HeaderMobile } from './components/HeaderMobile';
 import Footer from './components/Footer';
 import './App.css';
 import Cursor from './components/Cursor';
@@ -14,6 +15,8 @@ import { Blogs } from './pages/Blogs/Blogs'
 import { BlogDetail } from './pages/Blogs/BlogDetail'; // Import your BlogDetail component
 import { Member } from './pages/Team/Member'
 import { ClientPage } from './pages/Clients/Clients'
+
+
 
 
 
@@ -38,13 +41,23 @@ function App() {
     }
   }, [location]);
   
+  const [isMobile, setIsMobile] = useState(window.innerWidth < 768);
+
+  useEffect(() => {
+    const handleResize = () => setIsMobile(window.innerWidth < 768);
+    window.addEventListener('resize', handleResize);
+    
+    return () => window.removeEventListener('resize', handleResize);
+  }, []);
+
+
 
   return (
     <div>
       <Cursor />
-      
-      {location.pathname !== "/" && <CreoLogo />}
-      <Header />
+      {isMobile? '': <CreoLogo /> }
+      {/* {location.pathname !== "/" && <CreoLogo />} */}
+      {isMobile ? <HeaderMobile /> : <Header />}
       <Routes location={location}>
         <Route path="/" element={<Home />} />
         <Route path="/about" element={<About />} />

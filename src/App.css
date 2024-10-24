@@ -12,7 +12,10 @@ html{
     margin: 0px;
     padding: 0px;
 }
-
+.homepage{
+  width: 100vw;
+  overflow-x: hidden;
+}
 a{
     color: inherit;
     font-size: inherit;
@@ -25,7 +28,14 @@ a{
     font-weight: normal;
     font-style: normal;
   }
+  @font-face {
+    font-family: 'Futura';
+    src: url('/src/assets/fonts/Futura URW Medium.ttf') format('truetype');
+    font-weight: 300;
+    font-style: normal;
+  }
 
+ 
 *{
     font-family: 'Poppins';
     margin: 0px;

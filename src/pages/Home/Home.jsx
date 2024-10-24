@@ -20,7 +20,7 @@ function Home({ updaters }) {
   }, []);
 
   return (
-    <div>
+    <div className='homepage'>
       {isMobile ? <BannerMobile /> : <Banner updaters={updaters} />}
       <Threesixty />
       <About />
