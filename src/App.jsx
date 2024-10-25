@@ -15,6 +15,8 @@ import { Blogs } from './pages/Blogs/Blogs'
 import { BlogDetail } from './pages/Blogs/BlogDetail'; // Import your BlogDetail component
 import { Member } from './pages/Team/Member'
 import { ClientPage } from './pages/Clients/Clients'
+import { SpeedInsights } from '@vercel/speed-insights/react';
+
 
 
 
@@ -54,7 +56,7 @@ function App() {
 
   return (
     <div>
-      
+      <SpeedInsights />
       {isMobile? '': <Cursor /> }
       {isMobile? '': <CreoLogo /> }
       {/* {location.pathname !== "/" && <CreoLogo />} */}
