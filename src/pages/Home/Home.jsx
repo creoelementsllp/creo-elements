@@ -21,6 +21,9 @@ function Home({ updaters }) {
 
   return (
     <div className='homepage'>
+    <head>
+    <meta name="descripition" content="Your partner for enhancing online presence and business growth through digital marketing strategies" />
+    </head>
       {isMobile ? <BannerMobile /> : <Banner updaters={updaters} />}
       <Threesixty />
       <About />
