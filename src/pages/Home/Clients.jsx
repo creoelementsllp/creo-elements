@@ -36,11 +36,11 @@ export const logos2 = [
   'https://backend.creo-elements.com/wp-content/uploads/2024/02/svgviewer-png-output-2.png', //trupsel
   'https://backend.creo-elements.com/wp-content/uploads/2024/04/MM-Bharwada-LOGO.png',
   'https://backend.creo-elements.com/wp-content/uploads/2023/10/ALLESTATE.png',
-  'https:/backend.creo-elements.com/wp-content/uploads/2024/10/Ray-Logo.png',
+  'https://backend.creo-elements.com/wp-content/uploads/2024/10/Ray-Logo.png',
   'https://backend.creo-elements.com/wp-content/uploads/2023/08/sleepy-tots.png',
-  'https:/backend.creo-elements.com/wp-content/uploads/2024/10/Symbol-Black@4x.png',
+  'https://backend.creo-elements.com/wp-content/uploads/2024/10/Symbol-Black@4x.png',
   'https://backend.creo-elements.com/wp-content/uploads/2023/09/mtbalogo-1.png',
-  'https:/backend.creo-elements.com/wp-content/uploads/2024/08/parinie-icon.png',
+  'https://backend.creo-elements.com/wp-content/uploads/2024/08/parinie-icon.png',
   'https://backend.creo-elements.com/wp-content/uploads/2024/06/natasha-scaled.jpg',
   'https://backend.creo-elements.com/wp-content/uploads/2023/08/social-toast.png',
   'https://backend.creo-elements.com/wp-content/uploads/2023/03/8.jpg', //artangle90
