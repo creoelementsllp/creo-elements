@@ -98,7 +98,7 @@ export const Banner = ({ updaters }) => {
       })
       .to('.creo_animated_logo_circle', {
         transform: 'translateY(-100vh)',
-        duration: 1.25,
+        duration: 1,
         stagger: 0.2,
         ease: "elastic.out(2,1)",
         marginLeft: '0px'
@@ -106,13 +106,14 @@ export const Banner = ({ updaters }) => {
 
       .to('.creo_animated_logo_circle', {
         marginLeft: '0px',
+        duration : 0,
       })
 
-      .to('header', {
-        transform: 'translateY(0px)',
-        duration: 0.5,
-        // delay: 0.5,
-      })
+        // .to('header', {
+        //   transform: 'translateY(0px)',
+        //   duration: 0.5,
+        //   // delay: 0.5,
+        // })
       .to('.creo_animated_logo_container .char', {
         transform: 'translateY(0px)',
         duration: 0.25,
