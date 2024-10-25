@@ -70,9 +70,9 @@ export const BlogDetail = () => {
   };
 
   // Set formattedTitle based on screen size
-  formattedTitle = isMobile ? addManualBreaks(title, 35) : addManualBreaks(title, 30);
+  formattedTitle = isMobile ? addManualBreaks(title, 16) : addManualBreaks(title, 30);
 
-  return (
+  return (  
     <div className="blog-detail">
       <Grids className='grid-1' />
       <div className='z-2 blog-page-wrapper'>

@@ -25,12 +25,25 @@ export const Blogs = () => {
     fetchPosts();
   }, []);
 
+
+
+  const [isMobile, setIsMobile] = useState(window.innerWidth < 825);
+
+  useEffect(() => {
+    const handleResize = () => setIsMobile(window.innerWidth < 825);
+    window.addEventListener('resize', handleResize);
+    
+    return () => window.removeEventListener('resize', handleResize);
+  }, []);
+
+
   if (loading) {
     return (
       <div className='blogs-page'>
         <Grids className='grid-1' />
         <div className='blogs-page-wrapper z-2'>
-          <WavyText fontSize="8rem">Blogs</WavyText>
+        {isMobile? <WavyText fontSize="4rem">Blogs</WavyText> : <WavyText fontSize="8rem">Blogs</WavyText>}
+          
           <div className="blog-grid">
             Loading...
           </div>
@@ -44,7 +57,7 @@ export const Blogs = () => {
       <Grids className='grid-1' />
       <div className='blogs-page-wrapper z-2'>
       <div className="blogs-heading">
-        <WavyText fontSize="8rem">Blogs</WavyText>
+      {isMobile? <WavyText fontSize="4rem">Blogs</WavyText> : <WavyText fontSize="8rem">Blogs</WavyText>}
         </div>
         <div className="blog-grid">
           {posts.map((post) => (
