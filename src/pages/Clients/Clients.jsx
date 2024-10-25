@@ -7,13 +7,13 @@ import WavyText from '../../components/elements/WavyText';
 
 export const ClientPage = () => {
   useEffect(() => {
-    const handleResize = () => setIsMobile(window.innerWidth < 768);
+    const handleResize = () => setIsMobile(window.innerWidth < 825);
     window.addEventListener('resize', handleResize);
     
     return () => window.removeEventListener('resize', handleResize);
   }, []);
 
-  const [isMobile, setIsMobile] = useState(window.innerWidth < 768);
+  const [isMobile, setIsMobile] = useState(window.innerWidth < 825);
 
   // Join logos1 and logos2
   const combinedLogos = [...logos1, ...logos2]; // You can also use logos1.concat(logos2)

@@ -8,6 +8,15 @@ export const BlogDetail = () => {
   const { blogId } = useParams();
   const [blogPost, setBlogPost] = useState(null);
   const [loading, setLoading] = useState(true);
+  const [isMobile, setIsMobile] = useState(window.innerWidth < 825);
+  let formattedTitle = '';
+
+  useEffect(() => {
+    const handleResize = () => setIsMobile(window.innerWidth < 825);
+    window.addEventListener('resize', handleResize);
+    
+    return () => window.removeEventListener('resize', handleResize);
+  }, []);
 
   useEffect(() => {
     const fetchPostDetail = async () => {
@@ -28,7 +37,9 @@ export const BlogDetail = () => {
       }
     };
 
-    fetchPostDetail();
+    if (blogId) {
+      fetchPostDetail();
+    }
   }, [blogId]);
 
   if (loading) {
@@ -58,7 +69,8 @@ export const BlogDetail = () => {
     return result + line.trim();
   };
 
-  const formattedTitle = addManualBreaks(title, 35); // Adjust charsPerLine for 8rem
+  // Set formattedTitle based on screen size
+  formattedTitle = isMobile ? addManualBreaks(title, 35) : addManualBreaks(title, 30);
 
   return (
     <div className="blog-detail">
@@ -66,17 +78,19 @@ export const BlogDetail = () => {
       <div className='z-2 blog-page-wrapper'>
         {/* Use dangerouslySetInnerHTML within WavyText */}
         <div className="title-wrapper">
-
-        <WavyText fontSize="4rem">
-          {formattedTitle }
-        </WavyText>
+        {isMobile? 
+          <WavyText fontSize="2rem">
+            {formattedTitle}
+          </WavyText> : 
+          <WavyText fontSize="4rem">
+            {formattedTitle}
+          </WavyText>}
         </div>
 
         {acf_fields.featured_image && (
           <img src={acf_fields.featured_image} alt={title} />
         )}
 
-        
         <div dangerouslySetInnerHTML={{ __html: acf_fields.blog_content }} />
       </div>
     </div>

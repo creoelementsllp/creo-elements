@@ -66,25 +66,25 @@
     background-color: #242424;
 }
 
-.blogs-page img {
+.blog-detail img {
     width: 100%;
 }
 
-.blogs-page div {
+.blog-detail div {
     color: white;
 }
 
 
-.blogs-page table {
+.blog-detail table {
   border: 1px solid white;
   border-collapse: collapse;
 }
 
-.blogs-page th {
+.blog-detail th {
   border: 1px solid;
 }
 
-.blogs-page td {
+.blog-detail td {
   border: 1px solid white;
 }
 
