@@ -110,7 +110,7 @@ export const Services = () => {
     return (
         <div className="services-wrapper full-width">
             <div className="services-navigation">
-                <button onClick={handlePrevious} className='callback-button'><FontAwesomeIcon icon={faArrowLeft} /></button>
+                <button onClick={handlePrevious} className='callback-button' aria-label='previous'><FontAwesomeIcon icon={faArrowLeft} /></button>
             </div>
             <div className="services">
                 {servicesData.map((service, index) => (
@@ -139,7 +139,7 @@ export const Services = () => {
                 ))}
             </div>
             
-            <button onClick={handleNext} className='callback-button'><FontAwesomeIcon icon={faArrowRight} /></button>
+            <button onClick={handleNext} className='callback-button' aria-label='next'><FontAwesomeIcon icon={faArrowRight} /></button>
         </div>
     );
 };

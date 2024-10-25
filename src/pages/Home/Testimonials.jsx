@@ -93,7 +93,7 @@ export const Testimonials = () => {
                         {slidesData.map((slide, index) => (
                             <SwiperSlide key={slide.id} data-id={slide.id}>
                                 <div className="testimonial-content">
-                                    <h4>{slide.content.title}</h4>
+                                    <div>{slide.content.title}</div>
                                     <p>
                                         {isMobile ? (
                                             expandedIndices.includes(index) ? (
