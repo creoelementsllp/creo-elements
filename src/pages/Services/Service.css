@@ -79,7 +79,13 @@
     color: #3eb8a2;
     border-radius: 50px;
 }
+.service-page .service-description p {
+    text-align: left;
+}
 
+.service-page .service-description li {
+    text-align: left;
+}
 
 @media screen and (max-width: 825px){
     .service-page .service-header {

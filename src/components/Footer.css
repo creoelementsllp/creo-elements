@@ -13,5 +13,6 @@ footer {
 }
 
 footer p {
-    margin: 0pc;
+    margin: 0px;
+    margin-left: 10px;
 }
