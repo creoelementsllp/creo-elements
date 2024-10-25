@@ -10,31 +10,31 @@ export const Partners = () => {
           </div>
           <div className="partner-body">
             <div className="partner">
-              <img src="https://creo-elements.com/wp-content/uploads/2024/06/hostinger.png" className='partner-image'></img>
+              <img src="https://creo-elements.com/wp-content/uploads/2024/06/hostinger.png" className='partner-image' alt="Hostinger Logo"></img>
               <div className='partner-name'>Hostinger</div>
               <div className='partner-description'>Delivering high-performance web hosting solutions with exceptional support and reliability.</div>
             </div>
             
             <div className="partner">
-              <img src="https://creo-elements.com/wp-content/uploads/2024/06/woocommerce.png" className='partner-image'></img>
+              <img src="https://creo-elements.com/wp-content/uploads/2024/06/woocommerce.png" className='partner-image' alt="Woocommerce Logo"></img>
               <div className='partner-name'>Woocommerce</div>
               <div className='partner-description'>Empowering your online presence with a versatile and customizable platform for building websites and running e-commerce stores seamlessly.</div>
             </div>
             
             <div className="partner">
-              <img src="https://creo-elements.com/wp-content/uploads/2024/06/godaddy.png" className='partner-image'></img>
+              <img src="https://creo-elements.com/wp-content/uploads/2024/06/godaddy.png" className='partner-image' alt="Godaddy Logo"></img>
               <div className='partner-name'>Godaddy</div>
               <div className='partner-description'>Your go-to provider for domain registration, web hosting, and online marketing tools.</div>
             </div>
             
             <div className="partner">
-              <img src="https://creo-elements.com/wp-content/uploads/2024/06/airpay.png" className='partner-image'></img>
+              <img src="https://creo-elements.com/wp-content/uploads/2024/06/airpay.png" className='partner-image' alt="Airpay Logo"></img>
               <div className='partner-name'>Airpay</div>
               <div className='partner-description'>Simplifying transactions with secure and seamless payment processing services.</div>
             </div>
             
             <div className="partner">
-              <img src="https://creo-elements.com/wp-content/uploads/2024/06/shopify.png" className='partner-image'></img>
+              <img src="https://creo-elements.com/wp-content/uploads/2024/06/shopify.png" className='partner-image' alt="Shopify Logo"></img>
               <div className='partner-name'>Shopify</div>
               <div className='partner-description'>Powering your e-commerce success with robust and easy-to-use online store solutions.</div>
             </div>

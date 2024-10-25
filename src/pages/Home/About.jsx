@@ -68,7 +68,7 @@ export const About = () => {
         <div className="about_section">
 
             <div className='frame'>
-                <img ref={aboutframeRef} src="/images/frame.webp" className="about_frame" />
+                <img ref={aboutframeRef} src="/images/frame.webp" className="about_frame" alt="your road to endless possibilities"/>
             </div>
             <div className="background">
                 <div className="background-image">
