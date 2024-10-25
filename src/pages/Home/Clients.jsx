@@ -15,6 +15,7 @@ export const logos1 = [
   'https://backend.creo-elements.com/wp-content/uploads/2024/07/ATULKASBEKAR.png',
   'https://backend.creo-elements.com/wp-content/uploads/2024/02/Preeti-McConkey.jpeg',
   'https://backend.creo-elements.com/wp-content/uploads/2024/02/19022024-Revised-logo-with-straight-India-Vietnam-Star.png',
+  'https://backend.creo-elements.com/wp-content/uploads/2024/10/kconcept.jpg',
   'https://backend.creo-elements.com/wp-content/uploads/2024/10/svgviewer-output-27.svg',
   'https://backend.creo-elements.com/wp-content/uploads/2024/05/peas-logo-2.png',
   'https://backend.creo-elements.com/wp-content/uploads/2023/03/9.jpg', //Sila

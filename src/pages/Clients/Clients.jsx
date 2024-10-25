@@ -15,8 +15,15 @@ export const ClientPage = () => {
 
   const [isMobile, setIsMobile] = useState(window.innerWidth < 825);
 
-  // Join logos1 and logos2
-  const combinedLogos = [...logos1, ...logos2]; // You can also use logos1.concat(logos2)
+  // Get the first half and second half of logos1 and logos2
+  const halfIndex1 = Math.ceil(logos1.length / 2);
+  const halfIndex2 = Math.ceil(logos2.length / 2);
+
+  const firstHalfLogos = [...logos1.slice(0, halfIndex1), ...logos2.slice(0, halfIndex2)];
+  const secondHalfLogos = [...logos1.slice(halfIndex1), ...logos2.slice(halfIndex2)];
+
+  // Combine them in the desired order
+  const combinedLogos = [...firstHalfLogos, ...secondHalfLogos];
 
   return (
     <div className="clients-page">
