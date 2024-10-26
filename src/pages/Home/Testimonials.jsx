@@ -18,12 +18,19 @@ export const Testimonials = () => {
     const slidesData = data.slidesData;
     const swiper1Ref = useRef(null);
     const swiper2Ref = useRef(null);
-    const navigationPrevRef = React.useRef(null);
-    const navigationNextRef = React.useRef(null);
-
     const [controlledSwiper, setControlledSwiper] = useState(null);
     const [expandedIndices, setExpandedIndices] = useState([]);
     const [isMobile, setIsMobile] = useState(window.innerWidth < 768);
+
+    const handleVisibility = (entries, swiperRef) => {
+        entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+                swiperRef.current?.autoplay?.start();
+            } else {
+                swiperRef.current?.autoplay?.stop();
+            }
+        });
+    };
 
     useEffect(() => {
         if (swiper1Ref.current && swiper2Ref.current) {
@@ -36,7 +43,29 @@ export const Testimonials = () => {
         const handleResize = () => setIsMobile(window.innerWidth < 768);
         window.addEventListener('resize', handleResize);
 
-        return () => window.removeEventListener('resize', handleResize);
+        // Intersection Observers for visibility control
+        const observer1 = new IntersectionObserver(
+            (entries) => handleVisibility(entries, swiper1Ref.current),
+            { threshold: 0.5 }
+        );
+
+        const observer2 = new IntersectionObserver(
+            (entries) => handleVisibility(entries, swiper2Ref.current),
+            { threshold: 0.5 }
+        );
+
+        if (swiper1Ref.current?.el) {
+            observer1.observe(swiper1Ref.current.el);
+        }
+        if (swiper2Ref.current?.el) {
+            observer2.observe(swiper2Ref.current.el);
+        }
+
+        return () => {
+            window.removeEventListener('resize', handleResize);
+            if (swiper1Ref.current?.el) observer1.unobserve(swiper1Ref.current.el);
+            if (swiper2Ref.current?.el) observer2.unobserve(swiper2Ref.current.el);
+        };
     }, [swiper1Ref.current, swiper2Ref.current]);
 
     const toggleExpand = (index) => {
@@ -67,11 +96,11 @@ export const Testimonials = () => {
                             swiper1Ref.current = swiper;
                         }}
                         controller={{ control: controlledSwiper?.swiper2 }}
+                        autoplay={{ delay: 10000 }}
                     >
                         {slidesData.map((slide) => (
                             <SwiperSlide key={slide.id} data-id={slide.id}>
                                 <img src={slide.image} alt="Creo Element's client - " />
-                                
                                 <div className='testimonials-title'>{slide.content.title}</div>
                             </SwiperSlide>
                         ))}
@@ -95,7 +124,7 @@ export const Testimonials = () => {
                         {slidesData.map((slide, index) => (
                             <SwiperSlide key={slide.id} data-id={slide.id}>
                                 <div className="testimonial-content">
-                                <div className='testimonials-title'>{slide.content.title}</div>
+                                    <div className='testimonials-title'>{slide.content.title}</div>
                                     <p>
                                         {isMobile ? (
                                             expandedIndices.includes(index) ? (

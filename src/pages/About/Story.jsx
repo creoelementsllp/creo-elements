@@ -55,13 +55,13 @@ export const Story = () => {
                             <div className="accordion">
                                 <div className="title">Crafting Your Story:</div>
                                 <div className="text">
-                                We build websites that showcase your brand, your values, and what makes you unique. It’s your online storefront, telling the world who you are and why they should choose you.
+                                We craft compelling digital marketing strategies that enhances  your brand, engage your audience, and drive business growth.
                                 </div>
                             </div>
                             <div className="accordion">
                                 <div className="title">Building Trust & Authority:</div>
                                 <div className="text">
-                                A professional website establishes credibility and builds trust with potential customers. They know you’re a legitimate business invested in their needs.
+                                A digital presence establishes credibility and builds trust with potential customers. They know you’re a legitimate business invested in their needs.
                                 </div>
                             </div>
                             <div className="accordion">

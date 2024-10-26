@@ -5,7 +5,6 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { library } from '@fortawesome/fontawesome-svg-core'
 import { fas ,faArrowRight, faArrowLeft} from '@fortawesome/free-solid-svg-icons'
 import { faTwitter, faFontAwesome} from '@fortawesome/free-brands-svg-icons'
-import { Link } from 'react-router-dom';
 
 library.add(faArrowRight);
 
@@ -48,10 +47,10 @@ const servicesData = [
         link: "/services/performance-marketing"
     },
     {
-        title: "Public Relations (PR)",
-        image: "/images/pr.webp",
-        description: "PR involves crafting messages that get people to trust and recognize the brand. It uses various tools to spread awareness and shape how the public sees the company.",
-        link: "/services/pr"
+        title: "Packaging",
+        image: "/images/packaging.webp",
+        description: "Your packaging is more than just a box. It's a silent salesperson, a brand ambassador on every shelf, and a crucial element in the customer experience.",
+        link: "/services/packaging"
     },
     {
         title: "Gifting Solutions",
@@ -72,10 +71,10 @@ const servicesData = [
         link: "/services/photography"
     },
     {
-        title: "Packaging",
-        image: "/images/packaging.webp",
-        description: "Your packaging is more than just a box. It's a silent salesperson, a brand ambassador on every shelf, and a crucial element in the customer experience.",
-        link: "/services/packaging"
+        title: "Public Relations (PR)",
+        image: "/images/pr.webp",
+        description: "PR involves crafting messages that get people to trust and recognize the brand. It uses various tools to spread awareness and shape how the public sees the company.",
+        link: "/services/pr"
     },
 ];
 
@@ -139,7 +138,7 @@ export const Services = () => {
                         </div>
                         <div className="service-title">
                             {activeService === index ? (
-                                <Link to={service.link} className='clickable' style={{color: "#3eb8a2"}}>{service.title}</Link>
+                                <a href={service.link} className='clickable' style={{color: "#3eb8a2"}}>{service.title}</a>
                             ) : (
                                 service.title
                             )}

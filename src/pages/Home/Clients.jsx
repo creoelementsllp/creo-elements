@@ -1,13 +1,9 @@
-import React from 'react';
-// Import Swiper React components
+import React, { useEffect, useRef } from 'react';
 import { Swiper, SwiperSlide } from 'swiper/react';
-
-// Import Swiper styles
 import 'swiper/css';
 import 'swiper/css/free-mode';
 import 'swiper/css/pagination';
 import './Clients.css';
-
 import { FreeMode, Pagination, Autoplay } from 'swiper/modules';
 
 
@@ -54,31 +50,62 @@ export const logos2 = [
 
 
 export const Clients = () => {
-  // First array of image URLs (for the first swiper)
+  const firstSwiperRef = useRef(null);
+  const secondSwiperRef = useRef(null);
 
+  const handleVisibility = (entries, swiperRef) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        swiperRef.current?.swiper?.autoplay.start();
+      } else {
+        swiperRef.current?.swiper?.autoplay.stop();
+      }
+    });
+  };
+
+  useEffect(() => {
+    const firstObserver = new IntersectionObserver(
+      (entries) => handleVisibility(entries, firstSwiperRef),
+      { threshold: 0.5 }
+    );
+
+    const secondObserver = new IntersectionObserver(
+      (entries) => handleVisibility(entries, secondSwiperRef),
+      { threshold: 0.5 }
+    );
+
+    if (firstSwiperRef.current) {
+      firstObserver.observe(firstSwiperRef.current);
+    }
+    if (secondSwiperRef.current) {
+      secondObserver.observe(secondSwiperRef.current);
+    }
+
+    return () => {
+      if (firstSwiperRef.current) {
+        firstObserver.unobserve(firstSwiperRef.current);
+      }
+      if (secondSwiperRef.current) {
+        secondObserver.unobserve(secondSwiperRef.current);
+      }
+    };
+  }, []);
 
   return (
     <div className="clients-container full-width" id="clients">
-
-
-
-
-
       <div className='clients-container-wrapper'>
-        {/* <h2>Trusted by over 50+ clients</h2> */}
         <div className='clients-swiper-wrapper'>
-          <div className='firstswiper-wrapper'>
-            {/* First Swiper: Left to Right (Normal Direction) */}
+          <div className='firstswiper-wrapper' ref={firstSwiperRef}>
             <Swiper
-              slidesPerView={5} // Number of logos visible at once
-              spaceBetween={30} // Space between each logo
+              slidesPerView={5}
+              spaceBetween={30}
               freeMode={true}
-              loop={true} // Infinite loop
+              loop={true}
               autoplay={{
                 delay: 0,
                 disableOnInteraction: false,
               }}
-              speed={6000} // Scrolling speed
+              speed={6000}
               modules={[FreeMode, Pagination, Autoplay]}
               className="mySwiper"
             >
@@ -89,19 +116,18 @@ export const Clients = () => {
               ))}
             </Swiper>
           </div>
-          <div className='secondswiper-wrapper'>
-            {/* Second Swiper: Right to Left (Opposite Direction) */}
+          <div className='secondswiper-wrapper' ref={secondSwiperRef}>
             <Swiper
-              slidesPerView={5} // Number of logos visible at once
-              spaceBetween={30} // Space between each logo
+              slidesPerView={5}
+              spaceBetween={30}
               freeMode={true}
-              loop={true} // Infinite loop
+              loop={true}
               autoplay={{
                 delay: 0,
                 disableOnInteraction: false,
-                reverseDirection: true, // Reverse the direction
+                reverseDirection: true,
               }}
-              speed={6000} // Scrolling speed
+              speed={6000}
               modules={[FreeMode, Pagination, Autoplay]}
               className="mySwiper reverseSwiper"
             >
