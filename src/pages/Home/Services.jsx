@@ -48,10 +48,10 @@ const servicesData = [
         link: "/services/performance-marketing"
     },
     {
-        title: "Packaging",
-        image: "/images/packaging.webp",
-        description: "Your packaging is more than just a box. It's a silent salesperson, a brand ambassador on every shelf, and a crucial element in the customer experience.",
-        link: "/services/packaging"
+        title: "Public Relations (PR)",
+        image: "/images/pr.webp",
+        description: "PR involves crafting messages that get people to trust and recognize the brand. It uses various tools to spread awareness and shape how the public sees the company.",
+        link: "/services/pr"
     },
     {
         title: "Gifting Solutions",
@@ -72,10 +72,10 @@ const servicesData = [
         link: "/services/photography"
     },
     {
-        title: "Public Relations (PR)",
-        image: "/images/pr.webp",
-        description: "PR involves crafting messages that get people to trust and recognize the brand. It uses various tools to spread awareness and shape how the public sees the company.",
-        link: "/services/pr"
+        title: "Packaging",
+        image: "/images/packaging.webp",
+        description: "Your packaging is more than just a box. It's a silent salesperson, a brand ambassador on every shelf, and a crucial element in the customer experience.",
+        link: "/services/packaging"
     },
 ];
 
