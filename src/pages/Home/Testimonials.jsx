@@ -33,32 +33,36 @@ export const Testimonials = () => {
     };
 
     useEffect(() => {
-        if (swiper1Ref.current && swiper2Ref.current) {
-            setControlledSwiper({
-                swiper1: swiper1Ref.current,
-                swiper2: swiper2Ref.current,
-            });
-        }
-
         const handleResize = () => setIsMobile(window.innerWidth < 768);
         window.addEventListener('resize', handleResize);
 
         // Intersection Observers for visibility control
         const observer1 = new IntersectionObserver(
-            (entries) => handleVisibility(entries, swiper1Ref.current),
+            (entries) => handleVisibility(entries, swiper1Ref),
             { threshold: 0.5 }
         );
 
         const observer2 = new IntersectionObserver(
-            (entries) => handleVisibility(entries, swiper2Ref.current),
+            (entries) => handleVisibility(entries, swiper2Ref),
             { threshold: 0.5 }
         );
 
-        if (swiper1Ref.current?.el) {
-            observer1.observe(swiper1Ref.current.el);
-        }
-        if (swiper2Ref.current?.el) {
-            observer2.observe(swiper2Ref.current.el);
+        const attachObservers = () => {
+            if (swiper1Ref.current?.el) {
+                observer1.observe(swiper1Ref.current.el);
+            }
+            if (swiper2Ref.current?.el) {
+                observer2.observe(swiper2Ref.current.el);
+            }
+        };
+
+        // Attach once Swipers are ready
+        if (swiper1Ref.current && swiper2Ref.current) {
+            setControlledSwiper({
+                swiper1: swiper1Ref.current,
+                swiper2: swiper2Ref.current,
+            });
+            attachObservers();
         }
 
         return () => {
@@ -96,7 +100,7 @@ export const Testimonials = () => {
                             swiper1Ref.current = swiper;
                         }}
                         controller={{ control: controlledSwiper?.swiper2 }}
-                        autoplay={{ delay: 10000 }}
+                        autoplay={{ delay: 10000, disableOnInteraction: true }}
                     >
                         {slidesData.map((slide) => (
                             <SwiperSlide key={slide.id} data-id={slide.id}>
@@ -113,7 +117,7 @@ export const Testimonials = () => {
                         modules={[Navigation, Controller, Pagination, Autoplay]}
                         className="mySwiper2"
                         autoplay={{
-                            delay: 5000,
+                            // delay: 5000,
                             disableOnInteraction: true,
                         }}
                         onSwiper={(swiper) => {
