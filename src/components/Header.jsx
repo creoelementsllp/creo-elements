@@ -74,7 +74,7 @@ export const Header = () => {
           <Link to="contact-us" className="clickable">Contact Us</Link>
         </li>
         <li className="menu-items">
-          <Link to="/blog" className="clickable">Blog</Link>
+          <Link to="/blog" className="clickable">Blogs</Link>
         </li>
       </ul>
     </header>
