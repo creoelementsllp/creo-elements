@@ -35,9 +35,10 @@
     flex-direction: row;
     align-items: center;
     justify-content: center;
-    min-height: 100vh;
+    /* min-height: 100vh; */
+    padding-top: calc(50vh - 150px);
+    padding-bottom: 50px;
 }
-
 .service-page .service-description {
     width: 100%;
     display: flex;
