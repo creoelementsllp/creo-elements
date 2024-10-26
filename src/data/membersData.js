@@ -10,7 +10,7 @@ const membersData = [
       name: "Hiral Doctor",
       designation: "Co-founder",
       description: "A former banker turned entrepreneur, brings a unique perspective to her role as co-founder. Her years of experience in commercial banking at a multinational institution honed her analytical skills, which she now seamlessly blends with creativity to develop impactful brands. Beyond her business acumen, Hiral is a talented artist who expresses her boundless creativity through captivating works of art that evoke a range of emotions.",
-      image: '/images/Hiral-Mam.webp',
+      image: '/images/Hiral Mam new.png',
       slug: 'hiral-doctor',
     },
     {
