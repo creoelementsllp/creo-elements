@@ -158,6 +158,15 @@ export const Testimonials = () => {
                                             </span>
                                         )}
                                     </p>
+                                    <div className="testimonials-giver">
+                                        
+                                    <div className='testimonials-name'>
+                                        - {slide.content.name}
+                                    </div>
+                                    <div className='testimonials-position'>
+                                        {slide.content.designation}
+                                    </div>
+                                    </div>
                                 </div>
                             </SwiperSlide>
                         ))}
