@@ -1,6 +1,30 @@
 {
-"slidesData":
-[
+  "slidesData": [
+    {
+      "id": 3,
+      "image": "https://backend.creo-elements.com/wp-content/uploads/2024/10/Smasher-Logo-NoBg.png",
+      "content": {
+        "title": "DB Smashers (Hong Kong)",
+        "text": " We at DB Smashers Junior Cricket Club in Hong Kong are thrilled to share our exceptional experience with Creo Elements LLP. Their team has been instrumental in creating a user-friendly website that has revolutionised our club's operations.Creo Elements LLP's professionalism, quick turnaround, and ability to streamline complex manual processes have exceeded our expectations. This transformation has allowed us to focus more on what we love – cricket! We highly recommend their services to any organization seeking a reliable and innovative partner. Thank you, Creo Elements LLP, for your outstanding work!"
+      }
+    },
+    {
+      "id": 4,
+      "image": "https://creo-elements.com/wp-content/uploads/2024/06/Nypeas.jpeg",
+      "content": {
+        "title": "NYPEAS (New York)",
+        "text": "Creo Elements LLP demonstrated exceptional professionalism and technical acumen in the development of our website. Their problem-solving approach was particularly noteworthy, addressing challenges efficiently and effectively. The final product met our specified requirements precisely, reflecting a clear understanding of our business needs. Their customer service was exemplary, characterized by prompt communication and efficient project management. Based on our experience, we confidently recommend Creo Elements LLP for organizations seeking a reliable and competent design partner. - Vimmi Shroff & Jennifer Brozost (Peas: Private Education Advisory Service)"
+      }
+    },
+    
+    {
+      "id": 8,
+      "image": "https://creo-elements.com/wp-content/uploads/2023/03/ST.jpg",
+      "content": {
+        "title": "The InnerShift",
+        "text": "We were looking for an affordable marketing company and Creo Elements more than delivered. They manage our social media accounts, online webinars, and podcasts. We saw an immediate increase in our social media presence—our followers doubled in a month, and our business has increased 50% in two months! They took the time to understand who we are as a company and provided several amazing marketing plans to choose from. We wholeheartedly recommend Creo Elements to everyone we know."
+      }
+    },
     {
       "id": 1,
       "image": "https://creo-elements.com/wp-content/uploads/2023/07/be_desi.png",
@@ -18,23 +42,7 @@
       }
     },
     {
-      "id": 3,
-      "image": "https://backend.creo-elements.com/wp-content/uploads/2024/10/Smasher-Logo-NoBg.png",
-      "content": {
-        "title": "DBSmashers",
-        "text": " We at DB Smashers Junior Cricket Club in Hong Kong are thrilled to share our exceptional experience with Creo Elements LLP. Their team has been instrumental in creating a user-friendly website that has revolutionised our club's operations.Creo Elements LLP's professionalism, quick turnaround, and ability to streamline complex manual processes have exceeded our expectations. This transformation has allowed us to focus more on what we love – cricket! We highly recommend their services to any organization seeking a reliable and innovative partner. Thank you, Creo Elements LLP, for your outstanding work!"
-      }
-    },
-    {
-      "id": 3,
-      "image": "https://creo-elements.com/wp-content/uploads/2024/06/Nypeas.jpeg",
-      "content": {
-        "title": "NYPEAS (New York)",
-        "text": "Creo Elements LLP demonstrated exceptional professionalism and technical acumen in the development of our website. Their problem-solving approach was particularly noteworthy, addressing challenges efficiently and effectively. The final product met our specified requirements precisely, reflecting a clear understanding of our business needs. Their customer service was exemplary, characterized by prompt communication and efficient project management. Based on our experience, we confidently recommend Creo Elements LLP for organizations seeking a reliable and competent design partner. - Vimmi Shroff & Jennifer Brozost (Peas: Private Education Advisory Service)"
-      }
-    },
-    {
-      "id": 4,
+      "id": 5,
       "image": "https://creo-elements.com/wp-content/uploads/2023/07/Doodlz.png",
       "content": {
         "title": "Doodlz",
@@ -42,7 +50,7 @@
       }
     },
     {
-      "id": 5,
+      "id": 6,
       "image": "https://creo-elements.com/wp-content/uploads/2023/07/Project-Co.png",
       "content": {
         "title": "Project Co",
@@ -50,19 +58,11 @@
       }
     },
     {
-      "id": 6,
+      "id": 7,
       "image": "https://creo-elements.com/wp-content/uploads/2023/07/FnQ.png",
       "content": {
         "title": "FnQ",
         "text": "We had been looking for an agency for a while for our branding and we are more than happy to collaborate with Creo Elements as they have become a valuable asset and partner to our development and brand identity. Their ideas are out of the box, and the best part is their ability to deliver solutions for whatever the requirements are, whether it's branding, designing, printing, shooting an advertisement, or managing social media campaigns—all of which helps us focus on our core needs."
-      }
-    },
-    {
-      "id": 7,
-      "image": "https://creo-elements.com/wp-content/uploads/2023/03/ST.jpg",
-      "content": {
-        "title": "Sweta Thakkar",
-        "text": "We were looking for an affordable marketing company and Creo Elements more than delivered. They manage our social media accounts, online webinars, and podcasts. We saw an immediate increase in our social media presence—our followers doubled in a month, and our business has increased 50% in two months! They took the time to understand who we are as a company and provided several amazing marketing plans to choose from. We wholeheartedly recommend Creo Elements to everyone we know."
       }
     }
   ]

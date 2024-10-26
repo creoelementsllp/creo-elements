@@ -110,4 +110,10 @@ span.read-more {
 .testimonials-title {
     font-size: 2rem;
     color: white;
+    margin-top: 20px;
+}
+
+.testimonial-content .testimonials-title {
+    font-weight: 600;
+    margin-bottom: 20px;
 }
