@@ -27,6 +27,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-direction: column;
   }
   
   
@@ -104,3 +105,9 @@
 span.read-more {
     color: #242424;
 }   
+
+
+.testimonials-title {
+    font-size: 2rem;
+    color: white;
+}

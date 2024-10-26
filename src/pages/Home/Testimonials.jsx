@@ -70,7 +70,9 @@ export const Testimonials = () => {
                     >
                         {slidesData.map((slide) => (
                             <SwiperSlide key={slide.id} data-id={slide.id}>
-                                <img src={slide.image} alt="Creo Element's client -" />
+                                <img src={slide.image} alt="Creo Element's client - " />
+                                
+                                <div className='testimonials-title'>{slide.content.title}</div>
                             </SwiperSlide>
                         ))}
                     </Swiper>
@@ -93,7 +95,7 @@ export const Testimonials = () => {
                         {slidesData.map((slide, index) => (
                             <SwiperSlide key={slide.id} data-id={slide.id}>
                                 <div className="testimonial-content">
-                                    <div>{slide.content.title}</div>
+                                    {/* <div>{slide.content.title}</div> */}
                                     <p>
                                         {isMobile ? (
                                             expandedIndices.includes(index) ? (

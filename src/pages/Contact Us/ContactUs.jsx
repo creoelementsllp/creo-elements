@@ -11,7 +11,7 @@ export const ContactUS = () => {
         deadline: '',
         brand: '',
         industry: '',
-        website: '',
+        website: 'yes',
         website_url: '',
         email: '',
         phone: ''
@@ -24,6 +24,8 @@ export const ContactUS = () => {
         });
     };
 
+
+    
     const handleSubmit = async (e) => {
         e.preventDefault();
 
@@ -68,7 +70,7 @@ export const ContactUS = () => {
                     {isMobile? <WavyText fontSize="3rem" text="Contact Us" /> : <WavyText fontSize="8rem">Contact Us</WavyText>}
                     </div>
                     <form onSubmit={handleSubmit} className="contact-form">
-                    <label for="name">Hello my name is</label>
+                    <label htmlFor="name">Hello my name is</label>
                         <input
                             type="text"
                             name="name"
@@ -78,7 +80,7 @@ export const ContactUS = () => {
                             required
                         />
                         
-                    <label for="help">I'm looking for help with </label>
+                    <label htmlFor="help">I'm looking for help with </label>
                         <input
                             type="text"
                             name="help"
@@ -88,7 +90,7 @@ export const ContactUS = () => {
                             required
                         />
 
-                    <label for="budget">My budget is </label>
+                    <label htmlFor="budget">My budget is </label>
                         <input
                             type="text"
                             name="budget"
@@ -98,7 +100,7 @@ export const ContactUS = () => {
                             required
                         />
                         
-                    <label for="deadline">And i need it by</label>
+                    <label htmlFor="deadline">And i need it by</label>
                         <input
                             type="text"
                             name="deadline"
@@ -108,7 +110,7 @@ export const ContactUS = () => {
                             required
                         />
                         
-                    <label for="brand">My brand name is</label>
+                    <label htmlFor="brand">My brand name is</label>
                         <input
                             type="text"
                             name="brand"
@@ -118,7 +120,7 @@ export const ContactUS = () => {
                             required
                         />
                         
-                    <label for="industry">which is into</label>
+                    <label htmlFor="industry">which is into</label>
                         <input
                             type="text"
                             name="industry"
@@ -130,9 +132,9 @@ export const ContactUS = () => {
                         
                         <select
                             name="website"
-                            // placeholder="Do you have a website?"
                             value={formData.website}
                             onChange={handleChange}
+                            defaultValue="yes"
                         >
                             <option value="yes">
                                 I have a website
@@ -141,8 +143,10 @@ export const ContactUS = () => {
                                 I don't have a website
                             </option>
                         </select>
-                        
-                    <label for="website_url">It's on</label>
+
+                    {formData.website === 'yes' && (
+                        <>
+                        <label htmlFor="website_url">It's on</label>
                         <input
                             type="url"
                             name="website_url"
@@ -150,8 +154,10 @@ export const ContactUS = () => {
                             value={formData.website_url}
                             onChange={handleChange}
                         />
+                        </>
+                    )}
                         
-                    <label for="email">Please contact me at</label>
+                    <label htmlFor="email">Please contact me at</label>
                         <input
                             type="email"
                             name="email"
@@ -160,7 +166,7 @@ export const ContactUS = () => {
                             onChange={handleChange}
                             required
                         />
-                    <label for="email">and</label>
+                    <label htmlFor="phone">and</label>
                         <input
                             type="text"
                             name="phone"
@@ -178,3 +184,4 @@ export const ContactUS = () => {
         </div>
     );
 };
+

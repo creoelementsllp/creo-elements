@@ -5,6 +5,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { library } from '@fortawesome/fontawesome-svg-core'
 import { fas ,faArrowRight, faArrowLeft} from '@fortawesome/free-solid-svg-icons'
 import { faTwitter, faFontAwesome} from '@fortawesome/free-brands-svg-icons'
+import { Link } from 'react-router-dom';
 
 library.add(faArrowRight);
 
@@ -81,31 +82,45 @@ const servicesData = [
 export const Services = () => {
     const [activeService, setActiveService] = useState(0);
     const [isInteracted, setIsInteracted] = useState(false);
+    const [isInView, setIsInView] = useState(false);
 
     const handleClick = (index) => {
         setActiveService(index);
-        setIsInteracted(true); // Stop the loop on user interaction
+        setIsInteracted(true);
     };
 
     const handlePrevious = () => {
         setActiveService((prev) => (prev === 0 ? servicesData.length - 1 : prev - 1));
-        setIsInteracted(true); // Stop the loop on button click
+        setIsInteracted(true);
     };
 
     const handleNext = () => {
         setActiveService((prev) => (prev + 1) % servicesData.length);
-        setIsInteracted(true); // Stop the loop on button click
+        setIsInteracted(true);
     };
 
     useEffect(() => {
-        if (isInteracted) return; // Stop the loop if there's any user interaction
+        if (isInteracted || !isInView) return;
 
         const interval = setInterval(() => {
             setActiveService((prev) => (prev + 1) % servicesData.length);
-        }, 3000); // Change service every 3 seconds
+        }, 3000);
 
-        return () => clearInterval(interval); // Clean up the interval on component unmount
-    }, [isInteracted]);
+        return () => clearInterval(interval);
+    }, [isInteracted, isInView]);
+
+    useEffect(() => {
+        const handleScroll = () => {
+            const servicesElement = document.querySelector('.services-wrapper');
+            const rect = servicesElement.getBoundingClientRect();
+            setIsInView(rect.top >= 0 && rect.bottom <= window.innerHeight);
+        };
+
+        window.addEventListener('scroll', handleScroll);
+        handleScroll(); // Initial check
+
+        return () => window.removeEventListener('scroll', handleScroll);
+    }, []);
 
     return (
         <div className="services-wrapper full-width">
@@ -124,7 +139,7 @@ export const Services = () => {
                         </div>
                         <div className="service-title">
                             {activeService === index ? (
-                                <a href={service.link} className='clickable' style={{color: "#3eb8a2"}}>{service.title}</a>
+                                <Link to={service.link} className='clickable' style={{color: "#3eb8a2"}}>{service.title}</Link>
                             ) : (
                                 service.title
                             )}
@@ -138,7 +153,7 @@ export const Services = () => {
                     </div>
                 ))}
             </div>
-            
+
             <button onClick={handleNext} className='callback-button' aria-label='next'><FontAwesomeIcon icon={faArrowRight} /></button>
         </div>
     );

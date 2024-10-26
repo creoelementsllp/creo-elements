@@ -1,6 +1,7 @@
 import React, { useRef, useEffect } from 'react';
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
+import { Link } from 'react-router-dom';
 
 import './About.css'
 
@@ -85,7 +86,7 @@ export const About = () => {
                             <br />
                             Let's make an impact together...
                             <br /><br />
-                            <a href="/who-we-are" ><u className="clickable">Read More about Creo Elements</u></a>
+                            <Link to="/about" ><u className="clickable">Read More about Creo Elements</u></Link>
                         </div>
                     </div>
 
