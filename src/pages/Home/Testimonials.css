@@ -129,3 +129,9 @@ span.read-more {
     font-style: italic;
     margin-top: 20px;
 }
+
+@media screen and (max-width : 825px) { 
+    .testimonials-title {
+        font-size: 1.5rem;
+    }
+}
