@@ -55,13 +55,6 @@ const membersData = [
       image: '/images/Anand.webp',
       slug: 'anand',
     },
-    {
-      name: "Rahul",
-      designation: "",
-      description: "The extreme extrovert who likes to be around people all the time, cracks jokes and has a passion for creative communication and ad film.",
-      image: '/images/Raahull.webp',
-      slug: 'rahul',
-    },
   ];
   
   export default membersData;

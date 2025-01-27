@@ -3,13 +3,9 @@ import react from '@vitejs/plugin-react'
 
 // https://vitejs.dev/config/
 export default defineConfig({
-  plugins: [react()],
-  server: {
-    host: '0.0.0.0',
-    port: 5173
+  base: '/react/build/', // Prefix all paths with /react/build/
+  build: {
+    outDir: 'C:/Users/vinay/OneDrive/Desktop/React Trials/creo-elements/react/build', // Specify the output directory (relative path)
   },
-  preview: {
-    host: '0.0.0.0',
-    port: 5173
-  }
+  plugins: [react()], // Add the React plugin here
 })
