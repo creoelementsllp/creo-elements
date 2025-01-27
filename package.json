@@ -8,7 +8,8 @@
     "dev": "vite",
     "build": "vite build",
     "lint": "eslint .",
-    "preview": "vite preview"
+    "preview": "vite preview",
+   "production": "npm run build && cd .\\react\\ && git add . && git commit -m \"$npm_config_message\" && git push -u origin main && git status"
   },
   "dependencies": {
     "@barba/core": "^2.10.3",
