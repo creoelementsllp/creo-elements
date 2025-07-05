@@ -34,8 +34,8 @@ const WavyText = ({ children, text, fontSize }) => {
               height: `calc(${dynamicFontSize} + 10px)`, // Adjust height dynamically for each line
             }}
           >
-            <h2 style={dynamicStyle}>{line}</h2>
-            <h2 style={dynamicStyle}>{line}</h2>
+            <h1 style={dynamicStyle}>{line}</h1>
+            <span style={dynamicStyle} className="wave-text">{line}</span>
           </div>
         ))}
       </div>

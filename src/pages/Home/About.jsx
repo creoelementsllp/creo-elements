@@ -76,6 +76,7 @@ export const About = () => {
                     <div className='about_us_container'>
                         <div className="about_us_content">
                             <h2>About Us</h2>
+                            <p>
                             Creo Elements is your one-stop shop for all things digital marketing. We help businesses of all sizes to
                             achieve success in the ever-evolving online world. Our comprehensive suite of services helps you build a
                             strong brand presence and drive results.
@@ -86,6 +87,7 @@ export const About = () => {
                             <br />
                             Let's make an impact together...
                             <br /><br />
+                            </p>
                             <Link to="/about" ><u className="clickable">Read More about Creo Elements</u></Link>
                         </div>
                     </div>

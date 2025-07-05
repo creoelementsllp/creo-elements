@@ -1,45 +1,49 @@
-import React from 'react'
-import './Partners.css'
+import React from 'react';
+import './Partners.css';
+
+const partnersData = [
+  {
+    name: 'Hostinger',
+    image: 'https://creo-elements.com/blogs/wp-content/uploads/2025/05/hostinger.png',
+    description: 'Delivering high-performance web hosting solutions with exceptional support and reliability.',
+  },
+  {
+    name: 'WooCommerce',
+    image: 'https://creo-elements.com/blogs/wp-content/uploads/2025/05/woocommerce.png',
+    description: 'Empowering your online presence with a versatile and customizable platform for building websites and running e-commerce stores seamlessly.',
+  },
+  {
+    name: 'GoDaddy',
+    image: 'https://creo-elements.com/blogs/wp-content/uploads/2025/05/godaddy.png',
+    description: 'Your go-to provider for domain registration, web hosting, and online marketing tools.',
+  },
+  {
+    name: 'Airpay',
+    image: 'https://creo-elements.com/blogs/wp-content/uploads/2025/05/airpay-1.png',
+    description: 'Simplifying transactions with secure and seamless payment processing services.',
+  },
+  {
+    name: 'Shopify',
+    image: 'https://creo-elements.com/blogs/wp-content/uploads/2025/05/shopify.png',
+    description: 'Powering your e-commerce success with robust and easy-to-use online store solutions.',
+  },
+];
 
 export const Partners = () => {
   return (
-    <div className='partners-container full-width'>
-        <div className="partners-container-inner">
-          <div className="partner-header">
-            Affiliates & Partners
-          </div>
-          <div className="partner-body">
-            <div className="partner">
-              <img src="https://backend.creo-elements.com/wp-content/uploads/2024/06/hostinger.png" className='partner-image' alt="Hostinger Logo"></img>
-              <div className='partner-name'>Hostinger</div>
-              <div className='partner-description'>Delivering high-performance web hosting solutions with exceptional support and reliability.</div>
+    <div className="partners-container full-width">
+      <div className="partners-container-inner">
+        <h2 className="partner-header">Affiliates & Partners</h2>
+        <div className="partner-body">
+          {partnersData.map((partner, index) => (
+            <div className="partner" key={index}>
+              <img src={partner.image} className="partner-image" alt={`${partner.name} Logo`} />
+              <div className="partner-name">{partner.name}</div>
+              <div className="partner-description">{partner.description}</div>
             </div>
-            
-            <div className="partner">
-              <img src="https://backend.creo-elements.com/wp-content/uploads/2024/06/woocommerce.png" className='partner-image' alt="Woocommerce Logo"></img>
-              <div className='partner-name'>Woocommerce</div>
-              <div className='partner-description'>Empowering your online presence with a versatile and customizable platform for building websites and running e-commerce stores seamlessly.</div>
-            </div>
-            
-            <div className="partner">
-              <img src="https://backend.creo-elements.com/wp-content/uploads/2024/06/godaddy.png" className='partner-image' alt="Godaddy Logo"></img>
-              <div className='partner-name'>Godaddy</div>
-              <div className='partner-description'>Your go-to provider for domain registration, web hosting, and online marketing tools.</div>
-            </div>
-            
-            <div className="partner">
-              <img src="https://backend.creo-elements.com/wp-content/uploads/2024/06/airpay.png" className='partner-image' alt="Airpay Logo"></img>
-              <div className='partner-name'>Airpay</div>
-              <div className='partner-description'>Simplifying transactions with secure and seamless payment processing services.</div>
-            </div>
-            
-            <div className="partner">
-              <img src="https://backend.creo-elements.com/wp-content/uploads/2024/06/shopify.png" className='partner-image' alt="Shopify Logo"></img>
-              <div className='partner-name'>Shopify</div>
-              <div className='partner-description'>Powering your e-commerce success with robust and easy-to-use online store solutions.</div>
-            </div>
-          </div>
+          ))}
         </div>
+      </div>
     </div>
-  )
-}
+  );
+};

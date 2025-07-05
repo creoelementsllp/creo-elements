@@ -84,7 +84,7 @@ export const Threesixty = () => {
     <>
     <div className="threesixty">
       <div ref={threesixtyRef} className="threesixty-container">
-        <div className="threesixty-text">360&#xb0; Marketing</div>
+        <h2 aria-label="360 degree Marketing" className="threesixty-text">360&#xb0; Marketing</h2>
       </div>
     </div>
     <div className="threesixtySupport"

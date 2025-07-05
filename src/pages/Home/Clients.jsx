@@ -6,48 +6,184 @@ import 'swiper/css/pagination';
 import './Clients.css';
 import { FreeMode, Pagination, Autoplay } from 'swiper/modules';
 
-
 export const logos1 = [
-  'https://backend.creo-elements.com/wp-content/uploads/2024/07/ATULKASBEKAR.png',
-  'https://backend.creo-elements.com/wp-content/uploads/2024/02/Preeti-McConkey.jpeg',
-  'https://backend.creo-elements.com/wp-content/uploads/2024/02/19022024-Revised-logo-with-straight-India-Vietnam-Star.png',
-  'https://backend.creo-elements.com/wp-content/uploads/2024/10/kconcept.jpg',
-  'https://backend.creo-elements.com/wp-content/uploads/2024/10/svgviewer-output-27.svg',
-  'https://backend.creo-elements.com/wp-content/uploads/2024/05/peas-logo-2.png',
-  'https://backend.creo-elements.com/wp-content/uploads/2023/03/9.jpg', //Sila
-  'https://backend.creo-elements.com/wp-content/uploads/2024/10/Smasher-Logo-NoBg.png',
-  'https://backend.creo-elements.com/wp-content/uploads/2024/04/United-Logo-on-CREO.png',
-  'https://backend.creo-elements.com/wp-content/uploads/2023/03/11.jpg', //Littlethingscute
-  'https://backend.creo-elements.com/wp-content/uploads/2024/04/CSP-logo.webp',
-  'https://backend.creo-elements.com/wp-content/uploads/2023/09/WhatsApp-Image-2023-09-06-at-18.03.51.jpeg', //ether
-  'https://backend.creo-elements.com/wp-content/uploads/2024/02/Zircon-for-CREO-website.png',
-  'https://backend.creo-elements.com/wp-content/uploads/2023/03/10.jpg', //innershift
-  'https://backend.creo-elements.com/wp-content/uploads/2023/03/5.jpg', //project co.
-  'https://backend.creo-elements.com/wp-content/uploads/2024/01/kidsandbagstore-new-logo.png',
-  'https://backend.creo-elements.com/wp-content/uploads/2023/03/4.jpg', //doodly
+  {
+    name: 'Atul Kasbekar',
+    url: 'https://creo-elements.com/blogs/wp-content/uploads/2025/05/Atul_Kasbekar.png'
+  },
+  {
+    name: "Eesha Amiin",
+    url: 'https://creo-elements.com/blogs/wp-content/uploads/2025/07/eshaa-amiin-logo.webp'
+  }, //Eesha Amiin
+  {
+    name: "Preeti McConkey",
+    url: 'https://creo-elements.com/blogs/wp-content/uploads/2025/05/Preeti_McConkey.jpeg'
+  },
+  {
+    name: "IVCCI - Indo-Vietnam Chamber of Commerce and Industry",
+    url: 'https://creo-elements.com/blogs/wp-content/uploads/2025/05/IVCCI_-_Indo-Vietnam_Chamber_of_Commerce_and_Industry.png'
+  }, //IVCCI
+  {
+    name: "The Ke Concept",
+    url: 'https://creo-elements.com/blogs/wp-content/uploads/2025/05/The_Ke_Concept.jpg'
+  },
+  {
+    name: "Experience Jaisalmer",
+    url: 'https://creo-elements.com/blogs/wp-content/uploads/2025/05/Experience_Jaisalmer.png'
+  },
+  {
+    name: "Puri Developers",
+    url: 'https://creo-elements.com/blogs/wp-content/uploads/2025/05/PuriDevelopers.png'
+  }, //Puri
+  {
+    name: "NYPeas",
+    url: 'https://creo-elements.com/blogs/wp-content/uploads/2025/05/NYPeas.png'
+  },
+  {
+    name: "Sila",
+    url: 'https://creo-elements.com/blogs/wp-content/uploads/2025/05/Sila.jpg'
+  }, //Sila
+  {
+    name: "Radhika Dhawan",
+    url: 'https://creo-elements.com/blogs/wp-content/uploads/2025/06/Radhika-Logo.png'
+  }, //Radhika
+  {
+    name: "Inara by Sana Pathella",
+    url: 'https://creo-elements.com/blogs/wp-content/uploads/2025/06/Inara-by-sana.png'
+  }, 
+  {
+    name: "DBSmashers (Hong Kong)",
+    url: 'https://creo-elements.com/blogs/wp-content/uploads/2025/05/DBSmashers_Hong_Kong.png'
+  },
+  {
+    name: "United Surgical Traders",
+    url: 'https://creo-elements.com/blogs/wp-content/uploads/2025/05/United_Surgical_Traders.png'
+  },
+  {
+    name: "Little Things Cute",
+    url: 'https://creo-elements.com/blogs/wp-content/uploads/2025/05/Little_Things_Cute.webp'
+  },
+  {
+    name: "Cute Style Pick (Kalbadevi)",
+    url: 'https://creo-elements.com/blogs/wp-content/uploads/2025/05/Cute_Style_Pick_Kalbadevi.webp'
+  },
+  {
+    name: "EtherWire",
+    url: 'https://creo-elements.com/blogs/wp-content/uploads/2025/05/EtherWire.jpeg'
+  }, //EtherWire
+  {
+    name: "Zircon Limited",
+    url: 'https://creo-elements.com/blogs/wp-content/uploads/2025/05/Zircon_Limited.png'
+  },
+  // {
+  //   name: "Project Co.",
+  //   url: 'https://creo-elements.com/blogs/wp-content/uploads/2025/05/Project_Co.jpg'
+  // }, //Project Co.
+  {
+    name: "Kids And Bag Store",
+    url: 'https://creo-elements.com/blogs/wp-content/uploads/2025/05/Kids_And_Bag_Store.png'
+  },
+  // {
+  //   name: "Doodlz",
+  //   url: 'https://creo-elements.com/blogs/wp-content/uploads/2025/05/Doodlz.jpg'
+  // }, //Doodlz
 ];
 
-// Second array of image URLs (for the second swiper)
 export const logos2 = [
-  'https://backend.creo-elements.com/wp-content/uploads/2023/03/2.jpg', //hsbc
-  'https://backend.creo-elements.com/wp-content/uploads/2024/02/svgviewer-png-output-2.png', //trupsel
-  'https://backend.creo-elements.com/wp-content/uploads/2024/04/MM-Bharwada-LOGO.png',
-  'https://backend.creo-elements.com/wp-content/uploads/2023/10/ALLESTATE.png',
-  'https://backend.creo-elements.com/wp-content/uploads/2024/10/Ray-Logo.png',
-  'https://backend.creo-elements.com/wp-content/uploads/2023/08/sleepy-tots.png',
-  'https://backend.creo-elements.com/wp-content/uploads/2024/10/Symbol-Black@4x.png',
-  'https://backend.creo-elements.com/wp-content/uploads/2023/09/mtbalogo-1.png',
-  'https://backend.creo-elements.com/wp-content/uploads/2024/08/parinie-icon.png',
-  'https://backend.creo-elements.com/wp-content/uploads/2024/06/natasha-scaled.jpg',
-  'https://backend.creo-elements.com/wp-content/uploads/2023/08/social-toast.png',
-  'https://backend.creo-elements.com/wp-content/uploads/2023/03/8.jpg', //artangle90
-  'https://backend.creo-elements.com/wp-content/uploads/2023/03/7.jpg', //coolab project
-  'https://backend.creo-elements.com/wp-content/uploads/2023/03/3.jpg', // Be desi
-  'https://backend.creo-elements.com/wp-content/uploads/2023/03/6.jpg', //FNQ
-  'https://backend.creo-elements.com/wp-content/uploads/2023/10/CREATIVE-WINDOW.png', //360 south
+  {
+    name: "HSBC",
+    url: 'https://creo-elements.com/blogs/wp-content/uploads/2025/05/HSBC.jpg'
+  }, //HSBC
+  {
+    name: "Trupsel",
+    url: 'https://creo-elements.com/blogs/wp-content/uploads/2025/05/Trupsel.png'
+  }, //Trupsel
+  {
+    name: "MMBharwada",
+    url: 'https://creo-elements.com/blogs/wp-content/uploads/2025/05/MMBharwada.png'
+  },
+  {
+    name: "Allestate",
+    url: 'https://creo-elements.com/blogs/wp-content/uploads/2025/05/Allestate.png'
+  },
+  {
+    name: "SSSCPA",
+    url: 'https://creo-elements.com/blogs/wp-content/uploads/2025/07/SSSCPALOGO-scaled.png'
+  },
+  {
+    name: "Irah Lifespace",
+    url: 'https://creo-elements.com/blogs/wp-content/uploads/2025/05/Irah_Lifespace.png'
+  },
+  {
+    name: "RAY",
+    url: 'https://creo-elements.com/blogs/wp-content/uploads/2025/05/RAY.png'
+  },
+  {
+    name: "House Of EEKKTA",
+    url: 'https://creo-elements.com/blogs/wp-content/uploads/2025/05/House_Of_EEKKTA.png'
+  },
+  {
+    name: "Here Comes The Bride",
+    url: 'https://creo-elements.com/blogs/wp-content/uploads/2025/06/HCTB-logo-with-tagline.png'
+  },
+  {
+    name: "Sleepy Tots Nightwear",
+    url: 'https://creo-elements.com/blogs/wp-content/uploads/2025/05/Sleepy_Tots_Nightwear.png'
+  },
+  {
+    name: "Dorii",
+    url: 'https://creo-elements.com/blogs/wp-content/uploads/2025/05/Dorii.png'
+  },
+  {
+    name: "Atelier Shibani",
+    url: 'https://creo-elements.com/blogs/wp-content/uploads/2025/05/Atelier_Shibani.png'
+  }, //AtelierShibani
+  {
+    name: "MTBA - Maharashtra Tenpin Bowling Association",
+    url: 'https://creo-elements.com/blogs/wp-content/uploads/2025/05/MTBA_-_Maharashtra_Tenpin_Bowling_Association.png'
+  },
+  {
+    name: "Meher Roshani Foundation",
+    url: 'https://creo-elements.com/blogs/wp-content/uploads/2025/05/Meher_Roshani_Foundation.webp'
+  },
+  {
+    name: "Parinie",
+    url: 'https://creo-elements.com/blogs/wp-content/uploads/2025/05/Parinie.png'
+  },
+  {
+    name: "Natasha The Dentist",
+    url: 'https://creo-elements.com/blogs/wp-content/uploads/2025/05/Natasha_The_Dentist.jpg'
+  },
+  {
+    name: "Social Toast",
+    url: 'https://creo-elements.com/blogs/wp-content/uploads/2025/05/Social_Toast.png'
+  },
+  {
+    name: "Artangle90",
+    url: 'https://creo-elements.com/blogs/wp-content/uploads/2025/05/Artangle90.jpg'
+  },
+  //Artangle
+  {
+    name: "The Inner Shift",
+    url: 'https://creo-elements.com/blogs/wp-content/uploads/2025/05/The_Inner_Shift.jpg'
+  }, //The Inner Shift
+  // {
+  //   name: "CoolLab Project",
+  //   url: 'https://creo-elements.com/blogs/wp-content/uploads/2025/05/CoolLab_Project.jpg'
+  // }, //CoolLab Project
+  // {
+  //   name: "Be Desi",
+  //   url: 'https://creo-elements.com/blogs/wp-content/uploads/2025/05/Be_Desi.jpg'
+  // }, //Be Desi
+  // {
+  //   name: "FNQ",
+  //   url: 'https://creo-elements.com/blogs/wp-content/uploads/2025/05/FNQ.jpg'
+  // }, //FnQ
+  {
+    name: "360South",
+    url: 'https://creo-elements.com/blogs/wp-content/uploads/2025/05/360South.png'
+  }, //360South
 ];
-
-
 
 export const Clients = () => {
   const firstSwiperRef = useRef(null);
@@ -92,9 +228,13 @@ export const Clients = () => {
   }, []);
 
   return (
-    <div className="clients-container full-width" id="clients">
+    <section className="clients-container full-width" id="clients-section">
       <div className='clients-container-wrapper'>
+        <h2>Our Clients</h2>
+        <p style={{ textAlign: 'center' }}>We are proud to work with a diverse range of trusted clients and partners.</p>
+
         <div className='clients-swiper-wrapper'>
+          <div className='clients-overlay'></div>
           <div className='firstswiper-wrapper' ref={firstSwiperRef}>
             <Swiper
               slidesPerView={5}
@@ -111,11 +251,12 @@ export const Clients = () => {
             >
               {logos1.map((logo, index) => (
                 <SwiperSlide key={index}>
-                  <img src={logo} alt={`Logo ${index + 1}`} />
+                  <img src={logo.url} alt={logo.name} />
                 </SwiperSlide>
               ))}
             </Swiper>
           </div>
+
           <div className='secondswiper-wrapper' ref={secondSwiperRef}>
             <Swiper
               slidesPerView={5}
@@ -133,13 +274,13 @@ export const Clients = () => {
             >
               {logos2.map((logo, index) => (
                 <SwiperSlide key={index}>
-                  <img src={logo} alt={`Alt Logo ${index + 1}`} />
+                  <img src={logo.url} alt={logo.name} />
                 </SwiperSlide>
               ))}
             </Swiper>
           </div>
         </div>
       </div>
-    </div>
+    </section>
   );
 };

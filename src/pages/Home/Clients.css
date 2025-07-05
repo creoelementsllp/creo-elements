@@ -64,7 +64,7 @@
 
   .clients-container h2 {
     color: #000000;
-    font-size: 2rem;
+    font-size: 3rem;
     font-family: 'Poppins';
     width: 75%;
     margin: auto;
@@ -83,7 +83,7 @@
 
 .clients-container-wrapper {
     height: fit-content;
-    width: 75%;
+    width: 100%;
 }
 
 .clients-swiper-wrapper img {
@@ -95,6 +95,17 @@
   display: flex;
   flex-direction: column;
   gap: 20px;
+  position: relative;
+}
+
+.clients-overlay {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  height: 100%;
+  width: 100%;
+  z-index: 3;
+  background: linear-gradient(90deg, white 0%, transparent 18%), linear-gradient(270deg, white 0%, transparent 18%);
 }
 
 

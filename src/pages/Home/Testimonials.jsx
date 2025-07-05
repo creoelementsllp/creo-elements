@@ -1,178 +1,61 @@
-import React, { useRef, useState, useEffect } from 'react';
+import React, { useRef } from 'react';
 import { Swiper, SwiperSlide } from 'swiper/react';
+import { Navigation, EffectFade } from 'swiper/modules';
 import 'swiper/css';
 import 'swiper/css/navigation';
-import 'swiper/css/pagination';
+import 'swiper/css/effect-fade';
 import './Testimonials.css';
-import { Navigation, Controller, Pagination, Autoplay } from 'swiper/modules';
 import * as data from './Testimonials.json';
 
 export const Testimonials = () => {
-    const pagination = {
-        clickable: true,
-        renderBullet: function (index, className) {
-            return '<span class="' + className + '"></span>';
-        },
-    };
+  const slidesData = data.slidesData;
+  const swiperRef = useRef(null);
 
-    const slidesData = data.slidesData;
-    const swiper1Ref = useRef(null);
-    const swiper2Ref = useRef(null);
-    const [controlledSwiper, setControlledSwiper] = useState(null);
-    const [expandedIndices, setExpandedIndices] = useState([]);
-    const [isMobile, setIsMobile] = useState(window.innerWidth < 768);
-
-    const handleVisibility = (entries, swiperRef) => {
-        entries.forEach((entry) => {
-            if (entry.isIntersecting) {
-                swiperRef.current?.autoplay?.start();
-            } else {
-                swiperRef.current?.autoplay?.stop();
-            }
-        });
-    };
-
-    useEffect(() => {
-        const handleResize = () => setIsMobile(window.innerWidth < 768);
-        window.addEventListener('resize', handleResize);
-
-        // Intersection Observers for visibility control
-        const observer1 = new IntersectionObserver(
-            (entries) => handleVisibility(entries, swiper1Ref),
-            { threshold: 0.5 }
-        );
-
-        const observer2 = new IntersectionObserver(
-            (entries) => handleVisibility(entries, swiper2Ref),
-            { threshold: 0.5 }
-        );
-
-        const attachObservers = () => {
-            if (swiper1Ref.current?.el) {
-                observer1.observe(swiper1Ref.current.el);
-            }
-            if (swiper2Ref.current?.el) {
-                observer2.observe(swiper2Ref.current.el);
-            }
-        };
-
-        // Attach once Swipers are ready
-        if (swiper1Ref.current && swiper2Ref.current) {
-            setControlledSwiper({
-                swiper1: swiper1Ref.current,
-                swiper2: swiper2Ref.current,
-            });
-            attachObservers();
-        }
-
-        return () => {
-            window.removeEventListener('resize', handleResize);
-            if (swiper1Ref.current?.el) observer1.unobserve(swiper1Ref.current.el);
-            if (swiper2Ref.current?.el) observer2.unobserve(swiper2Ref.current.el);
-        };
-    }, [swiper1Ref.current, swiper2Ref.current]);
-
-    const toggleExpand = (index) => {
-        setExpandedIndices((prev) =>
-            prev.includes(index) ? prev.filter(i => i !== index) : [...prev, index]
-        );
-    };
-
-    return (
-        <div className="testimonials-container full-width">
-            <div className="testimonials-wrapper">
-                <div className='left-side-test'>
-                    <Swiper
-                        effect='coverflow'
-                        grabCursor={true}
-                        centeredSlides={true}
-                        slidesPerView={2}
-                        coverflowEffect={{
-                            rotate: 0,
-                            stretch: 0,
-                            depth: 50,
-                            modifier: 6,
-                            slideShadows: false,
-                        }}
-                        modules={[Navigation, Controller]}
-                        className="mySwiper"
-                        onSwiper={(swiper) => {
-                            swiper1Ref.current = swiper;
-                        }}
-                        controller={{ control: controlledSwiper?.swiper2 }}
-                        autoplay={{ delay: 10000, disableOnInteraction: true }}
-                    >
-                        {slidesData.map((slide) => (
-                            <SwiperSlide key={slide.id} data-id={slide.id}>
-                                <img src={slide.image} alt="Creo Element's client - " />
-                                <div className='testimonials-title'>{slide.content.title}</div>
-                            </SwiperSlide>
-                        ))}
-                    </Swiper>
+  return (
+    <section className="testimonials-modern-container">
+      <Swiper
+        modules={[Navigation, EffectFade]}
+        effect="fade"
+        fadeEffect={{ crossFade: true }}
+        navigation={{
+          nextEl: '.testimonial-arrow-next',
+          prevEl: '.testimonial-arrow-prev',
+        }}
+        loop
+        autoplay={{ delay: 5000, disableOnInteraction: false }}
+        className="testimonials-modern-swiper"
+        onSwiper={swiper => (swiperRef.current = swiper)}
+      >
+        {slidesData.map((slide) => (
+          <SwiperSlide key={slide.id}>
+            <div className="testimonial-modern-card">
+              <div className="testimonial-modern-content">
+                <div className="testimonials-title">{slide.content.title}</div>
+                <p className="testimonial-modern-text">{slide.content.text}</p>
+                <div className="testimonial-modern-author">
+                  <div className="testimonial-modern-name">- {slide.content.name}</div>
+                  <div className="testimonial-modern-role">{slide.content.designation}</div>
                 </div>
-                <div className='right-side-test'>
-                    <Swiper
-                        pagination={pagination}
-                        direction='vertical'
-                        modules={[Navigation, Controller, Pagination, Autoplay]}
-                        className="mySwiper2"
-                        autoplay={{
-                            // delay: 5000,
-                            disableOnInteraction: true,
-                        }}
-                        onSwiper={(swiper) => {
-                            swiper2Ref.current = swiper;
-                        }}
-                        controller={{ control: controlledSwiper?.swiper1 }}
-                    >
-                        {slidesData.map((slide, index) => (
-                            <SwiperSlide key={slide.id} data-id={slide.id}>
-                                <div className="testimonial-content">
-                                    <div className='testimonials-title'>{slide.content.title}</div>
-                                    <p>
-                                        {isMobile ? (
-                                            expandedIndices.includes(index) ? (
-                                                slide.content.text
-                                            ) : (
-                                                <>
-                                                    {slide.content.text.slice(0, 100)}...
-                                                    {slide.content.text.length > 100 && (
-                                                        <span
-                                                            onClick={() => toggleExpand(index)}
-                                                            className="read-more"
-                                                        >
-                                                            Read More
-                                                        </span>
-                                                    )}
-                                                </>
-                                            )
-                                        ) : (
-                                            slide.content.text
-                                        )}
-                                        {expandedIndices.includes(index) && isMobile && (
-                                            <span
-                                                onClick={() => toggleExpand(index)}
-                                                className="read-more"
-                                            >
-                                                Show Less
-                                            </span>
-                                        )}
-                                    </p>
-                                    <div className="testimonials-giver">
-                                        
-                                    <div className='testimonials-name'>
-                                        - {slide.content.name}
-                                    </div>
-                                    <div className='testimonials-position'>
-                                        {slide.content.designation}
-                                    </div>
-                                    </div>
-                                </div>
-                            </SwiperSlide>
-                        ))}
-                    </Swiper>
-                </div>
+              </div>
+              <div className="testimonial-modern-image">
+                <img src={slide.image} alt={slide.content.name} />
+              </div>
             </div>
+          </SwiperSlide>
+        ))}
+        <div className="testimonial-arrow testimonial-arrow-prev">
+          <svg width="28" height="28" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <circle cx="14" cy="14" r="14" fill="#1e6f5c"/>
+            <path d="M17.5 21L11 14L17.5 7" stroke="#fff" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round"/>
+          </svg>
         </div>
-    );
+        <div className="testimonial-arrow testimonial-arrow-next">
+          <svg width="28" height="28" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <circle cx="14" cy="14" r="14" fill="#1e6f5c"/>
+            <path d="M10.5 7L17 14L10.5 21" stroke="#fff" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round"/>
+          </svg>
+        </div>
+      </Swiper>
+    </section>
+  );
 };

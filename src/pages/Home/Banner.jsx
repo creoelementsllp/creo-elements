@@ -8,10 +8,34 @@ export const Banner = ({ updaters }) => {
   const circleRef = useRef(null);
   const pupilRef = useRef(null);
   const tl = useRef();
-
-  const [scrolled, setScrolled] = useState(false);
+  const [fontLoaded, setFontLoaded] = useState(false);
 
   useEffect(() => {
+    // Load font before starting animation
+    const loadFont = async () => {
+      try {
+        const font = new FontFace("Sukar", "url(/fonts/sukar.woff)");
+        await font.load();
+        document.fonts.add(font);
+        console.log("Font loaded successfully", font);
+      } catch (error) {
+        console.error("Font loading failed:", error);
+      }
+    };
+    
+
+    loadFont();
+  }, []);
+
+  const [scrolled, setScrolled] = useState(false);  
+
+  useEffect(() => {
+
+
+    if (!fontLoaded) return; // Wait until font is loaded
+
+
+    
     const handleScroll = () => {
       if (window.scrollY > 0) {
         setScrolled(true);
@@ -241,13 +265,14 @@ export const Banner = ({ updaters }) => {
     <div id="section1">
       <div className="banner_space"></div>
       <div className="header">
-        <div className="inner-header">
-          <div className="creo_animated_logo_wrapper">
-            <div className="creo_animated_logo_container">
-              <div className="char">C</div>
-              <div className="char">R</div>
-              <div className="char">E</div>
-              <div
+        <span className="inner-header">
+          <span className="creo_animated_logo_wrapper">
+            <h1 aria-label="CREO ELEMENTS">
+            <span className="creo_animated_logo_container">
+              <span className="char">C</span>
+              <span className="char">R</span>
+              <span className="char">E</span>
+              <span
                 className="creo_animated_logo_circle"
                 id="creo_animated_logo_circle"
                 ref={circleRef}
@@ -259,21 +284,22 @@ export const Banner = ({ updaters }) => {
                 >
                   O
                 </div>
-              </div>
-            </div>
-            <div className="creo_animated_logo_elements_text">
-              <div className='char'>E</div>
-              <div className='char'>L</div>
-              <div className='char'>E</div>
-              <div className='char'>M</div>
-              <div className='char'>E</div>
-              <div className='char'>N</div>
-              <div className='char'>T</div>
-              <div className='char'>S</div>
-            </div>
-            <div className='elements_underline'></div>
-          </div>
-        </div>
+              </span>
+            </span>
+            <span className="creo_animated_logo_elements_text">
+              <span className='char'>E</span>
+              <span className='char'>L</span>
+              <span className='char'>E</span>
+              <span className='char'>M</span>
+              <span className='char'>E</span>
+              <span className='char'>N</span>
+              <span className='char'>T</span>
+              <span className='char'>S</span>
+            </span>
+            </h1>
+            <span className='elements_underline'></span>
+          </span>
+        </span>
         <div id="scrolltoexplore">
           Scroll to Explore<br />
           <div className="arrowdown">&darr;</div>

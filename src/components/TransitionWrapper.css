@@ -1,6 +1,0 @@
-/* TransitionWrapper.css */
-main {
-    position: static; /* Ensure it doesn’t set a positioning context */
-    overflow: hidden !important; /* Ensure it doesn’t clip any fixed children */
-  }
-  

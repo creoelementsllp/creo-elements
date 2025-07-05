@@ -5,8 +5,8 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 // import { CreoLogo } from './elements/CreoLogo';
 import { library } from '@fortawesome/fontawesome-svg-core'
 import { fas } from '@fortawesome/free-solid-svg-icons'
-import { faTwitter, faFontAwesome } from '@fortawesome/free-brands-svg-icons'
-library.add(fas, faTwitter, faFontAwesome)
+import { faTwitter, faFontAwesome, faInstagram } from '@fortawesome/free-brands-svg-icons'
+library.add(fas, faTwitter, faFontAwesome, faInstagram)
 
 
 export const Header = () => {
@@ -38,45 +38,48 @@ export const Header = () => {
 
   return (
     <header>
-      <div className="hamburger">
-      <FontAwesomeIcon icon="fa-solid fa-bars" />
-      </div>
-      <ul className="main-menu">
-        <li className="menu-items">
-          <Link to="/" className="clickable">Home</Link>
-        </li>
-        <li className="menu-items has-sub-menu">
-          What We Do
-          <ul className="sub-menu">
-            <li className="sub-menu-items"><Link to="services/social-media" className="clickable">Social Media</Link></li>
-            <li className="sub-menu-items"><Link to="services/web-development" className="clickable">Web Design / Development</Link></li>
-            <li className="sub-menu-items"><Link to="services/seo" className="clickable">SEO</Link></li>
-            <li className="sub-menu-items"><Link to="services/digital-marketing" className="clickable">Digital Marketing</Link></li>
-            <li className="sub-menu-items"><Link to="services/branding" className="clickable">Branding</Link></li>
-            <li className="sub-menu-items"><Link to="services/performance-marketing" className="clickable">Performance Marketing</Link></li>
-            <li className="sub-menu-items"><Link to="services/packaging" className="clickable">Packaging</Link></li>
-            <li className="sub-menu-items"><Link to="services/gifting-solutions" className="clickable">Gifting Solutions</Link></li>
-            <li className="sub-menu-items"><Link to="services/print-solutions" className="clickable">Print Solutions</Link></li>
-            <li className="sub-menu-items"><Link to="services/photography" className="clickable">Photography</Link></li>
-            <li className="sub-menu-items"><Link to="services/pr" className="clickable">Public Relations (PR)</Link></li>
-          </ul>
-        </li>
-        <li className="menu-items">
-          <Link to="/about" className="clickable">About Us</Link>
-        </li>
-        <li className="menu-items">
-          <Link to="/work-with-us" className="clickable">Work With Us</Link>
-        </li>
-        <li className="menu-items">
-          <Link to="/clients" className="clickable">Our Clients</Link>
-        </li>
-        <li className="menu-items">
-          <Link to="contact-us" className="clickable">Contact Us</Link>
-        </li>
-        <li className="menu-items">
-          <Link to="/blog" className="clickable">Blogs</Link>
-        </li>
-      </ul>
+      <button className="hamburger" aria-label="Open Menu">
+        <FontAwesomeIcon icon="fa-solid fa-bars" />
+      </button>
+      <nav aria-label="Main Navigation">
+        <ul className="main-menu">
+          <li className="menu-items">
+            <Link to="/" className="clickable">Home</Link>
+          </li>
+          <li className="menu-items has-sub-menu">
+            <span>What We Do</span>
+            <ul className="sub-menu">
+              <li className="sub-menu-items"><Link to="/services/social-media" className="clickable">Social Media</Link></li>
+              <li className="sub-menu-items"><Link to="/services/web-development" className="clickable">Web Design / Development</Link></li>
+              <li className="sub-menu-items"><Link to="/services/seo" className="clickable">SEO</Link></li>
+              <li className="sub-menu-items"><Link to="/services/digital-marketing" className="clickable">Digital Marketing</Link></li>
+              <li className="sub-menu-items"><Link to="/services/branding" className="clickable">Branding</Link></li>
+              <li className="sub-menu-items"><Link to="/services/performance-marketing" className="clickable">Performance Marketing</Link></li>
+              <li className="sub-menu-items"><Link to="/services/packaging" className="clickable">Packaging</Link></li>
+              <li className="sub-menu-items"><Link to="/services/gifting-solutions" className="clickable">Gifting Solutions</Link></li>
+              <li className="sub-menu-items"><Link to="/services/print-solutions" className="clickable">Print Solutions</Link></li>
+              <li className="sub-menu-items"><Link to="/services/photography" className="clickable">Photography</Link></li>
+              <li className="sub-menu-items"><Link to="/services/pr" className="clickable">Public Relations (PR)</Link></li>
+            </ul>
+          </li>
+          <li className="menu-items">
+            <Link to="/about" className="clickable">About Us</Link>
+          </li>
+          <li className="menu-items">
+            <Link to="/work-with-us" className="clickable">Work With Us</Link>
+          </li>
+          <li className="menu-items">
+            <Link to="/clients" className="clickable">Our Clients</Link>
+          </li>
+          <li className="menu-items">
+            <Link to="/contact-us" className="clickable">Contact Us</Link>
+          </li>
+          <li className="menu-items">
+            <Link to="/blog" className="clickable">Blogs</Link>
+          </li>
+        </ul>
+      </nav>
     </header>
+
   );
 };

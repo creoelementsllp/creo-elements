@@ -173,34 +173,36 @@ export const BannerMobile = ({ updaters }) => {
       <div className="header">
         <div className="inner-header">
           <div className="creo_animated_logo_wrapper">
-            <div className="creo_animated_logo_container">
-              <div className="char">C</div>
-              <div className="char">R</div>
-              <div className="char">E</div>
-              <div
-                className="creo_animated_logo_circle"
-                id="creo_animated_logo_circle"
-                ref={circleRef}
-              >
-                <div
-                  className="creo_animated_logo_pupil char"
-                  id="creo_animated_logo_pupil"
-                  ref={pupilRef}
+            <h1 aria-label="CREO ELEMENTS">
+              <span className="creo_animated_logo_container">
+                <span className="char">C</span>
+                <span className="char">R</span>
+                <span className="char">E</span>
+                <span
+                  className="creo_animated_logo_circle"
+                  id="creo_animated_logo_circle"
+                  ref={circleRef}
                 >
-                  O
-                </div>
-              </div>
-            </div>
-            <div className="creo_animated_logo_elements_text">
-              <div className='char'>E</div>
-              <div className='char'>L</div>
-              <div className='char'>E</div>
-              <div className='char'>M</div>
-              <div className='char'>E</div>
-              <div className='char'>N</div>
-              <div className='char'>T</div>
-              <div className='char'>S</div>
-            </div>
+                  <div
+                    className="creo_animated_logo_pupil char"
+                    id="creo_animated_logo_pupil"
+                    ref={pupilRef}
+                  >
+                    O
+                  </div>
+                </span>
+              </span>
+              <span className="creo_animated_logo_elements_text">
+                <span className='char'>E</span>
+                <span className='char'>L</span>
+                <span className='char'>E</span>
+                <span className='char'>M</span>
+                <span className='char'>E</span>
+                <span className='char'>N</span>
+                <span className='char'>T</span>
+                <span className='char'>S</span>
+              </span>
+            </h1>
             <div className='elements_underline'></div>
           </div>
         </div>

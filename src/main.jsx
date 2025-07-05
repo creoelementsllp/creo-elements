@@ -4,8 +4,11 @@ import { BrowserRouter as Router } from 'react-router-dom';
 import App from './App.jsx';
 import './index.css';
 
+import { HelmetProvider } from 'react-helmet-async';  // import HelmetProvider
 createRoot(document.getElementById('root')).render(
+
+  <HelmetProvider>
     <Router>
       <App />
-    </Router>,
+    </Router></HelmetProvider>,
 );

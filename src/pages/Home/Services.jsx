@@ -1,159 +1,165 @@
-import React, { useState , useEffect } from 'react'
-import Service from './Service'
-import { Grids } from '../../components/Grids'
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { library } from '@fortawesome/fontawesome-svg-core'
-import { fas ,faArrowRight, faArrowLeft} from '@fortawesome/free-solid-svg-icons'
-import { faTwitter, faFontAwesome} from '@fortawesome/free-brands-svg-icons'
-
-library.add(faArrowRight);
+import React, { useRef, useState, useEffect } from 'react';
+import { Link } from 'react-router-dom';
+import { gsap } from 'gsap';
+import { ScrollTrigger } from 'gsap/ScrollTrigger';
+import './Service.css';
 
 
 const servicesData = [
-    {
-        title: "Social Media",
-        image: "/images/social-media.webp",
-        description: "In today's digital world, social media is a powerful tool for brands to connect with customers, build brand awareness, and drive sales. But managing a successful social media presence requires more than just posting occasionally. This is where social media services for brands come in.",
-        link: "/services/social-media"
-    },
-    {
-        title: "Web Development",
-        image: "/images/web-design.webp",
-        description: "Your website is your digital handshake. In today's online world, it's the first impression you make on potential customers. We go beyond just creating virtual storefronts at CREO Elements. We craft websites that embody your brand's DNA, reflecting your values and dedication to quality. Unforgettable user experiences are our specialty. We'll bring your digital vision to life, ensuring every visitor leaves with a positive impression.",
-        link: "/services/web-development"
-    },
-    {
-        title: "SEO",
-        image: "/images/seo.webp",
-        description: "SEO stands for Search Engine Optimization. It's the ongoing process of optimizing your website and online presence to improve its visibility in search engine results pages (SERPs) for relevant keywords. The higher you rank, the more likely potential customers are to discover your brand.",
-        link: "/services/seo"
-    },
-    {
-        title: "Digital Marketing",
-        image: "/images/digital-marketing.webp",
-        description: "Imagine a world where potential customers can't find your brand online. In today's digital landscape, that's a harsh reality for businesses without a strong digital marketing strategy.",
-        link: "/services/digital-marketing"
-    },
-    {
-        title: "Branding",
-        image: "/images/branding.webp",
-        description: "Your brand is your identity. It's the essence of what makes your company unique and the emotional connection you forge with your customers. Branding is a comprehensive strategy encompassing everything from your visual identity to messaging.",
-        link: "/services/branding"
-    },
-    {
-        title: "Performance Marketing",
-        image: "/images/target-marketing.webp",
-        description: "Performance marketing is all about maximizing your return on investment (ROI) by focusing on marketing activities that deliver measurable results.",
-        link: "/services/performance-marketing"
-    },
-    {
-        title: "Packaging",
-        image: "/images/packaging.webp",
-        description: "Your packaging is more than just a box. It's a silent salesperson, a brand ambassador on every shelf, and a crucial element in the customer experience.",
-        link: "/services/packaging"
-    },
-    {
-        title: "Gifting Solutions",
-        image: "/images/gifting-solutions.webp",
-        description: "CREO Elements takes the guesswork out of gifting with our Corporate Gifting Service. We handle everything, from selecting thoughtful gifts that align with your brand to personalized messaging and seamless delivery.",
-        link: "/services/gifting-solutions"
-    },
-    {
-        title: "Print Solutions",
-        image: "/images/print-solutions.webp",
-        description: "Make a lasting impression across all touch points with our one-stop shop for premium printing solutions.",
-        link: "/services/print-solutions"
-    },
-    {
-        title: "Photography",
-        image: "/images/photography.webp",
-        description: "Visuals are powerful storytellers. In today's digital age, high-quality photos and videos are essential for capturing attention, building brand identity, and driving sales.",
-        link: "/services/photography"
-    },
-    {
-        title: "Public Relations (PR)",
-        image: "/images/pr.webp",
-        description: "PR involves crafting messages that get people to trust and recognize the brand. It uses various tools to spread awareness and shape how the public sees the company.",
-        link: "/services/pr"
-    },
+  {
+    title: "Social Media Management",
+    image: "/images/social-media.webp",
+    description: "Enhance brand engagement with expert social media strategies. We manage your presence across platforms, ensuring optimal audience reach.",
+    link: "/services/social-media",
+  },
+  {
+    title: "Web Design & Development",
+    image: "/images/web-design.webp",
+    description: "Your website is your brand's digital storefront. We build user-friendly, fast, and SEO-optimized websites that align with your business goals.",
+    link: "/services/web-development",
+  },
+  {
+    title: "SEO & Search Visibility",
+    image: "/images/seo.webp",
+    description: "Boost organic traffic with cutting-edge SEO techniques. Our strategies improve search rankings and ensure long-term visibility for your brand.",
+    link: "/services/seo",
+  },
+  {
+    title: "Digital Marketing Solutions",
+    image: "/images/digital-marketing.webp",
+    description: "Drive conversions with data-driven digital marketing campaigns. We focus on ROI-driven strategies to maximize your online impact.",
+    link: "/services/digital-marketing",
+  },
+  {
+    title: "Brand Identity & Positioning",
+    image: "/images/branding.webp",
+    description: "Strengthen your brand presence with compelling storytelling and strategic positioning. We craft unique brand identities that stand out.",
+    link: "/services/branding",
+  },
+  {
+    title: "Performance Marketing",
+    image: "/images/target-marketing.webp",
+    description: "Maximize returns with performance-driven marketing strategies. We focus on measurable growth and targeted campaign execution.",
+    link: "/services/performance-marketing",
+  },
+  {
+    title: "Creative Packaging Design",
+    image: "/images/packaging.webp",
+    description: "Transform packaging into an effective marketing tool. Our innovative packaging solutions enhance brand perception and consumer appeal.",
+    link: "/services/packaging",
+  },
+  {
+    title: "Corporate Gifting Solutions",
+    image: "/images/gifting-solutions.webp",
+    description: "Simplify corporate gifting with tailored solutions. We curate, customize, and deliver premium gifts that strengthen client relationships.",
+    link: "/services/gifting-solutions",
+  },
+  {
+    title: "Premium Print Solutions",
+    image: "/images/print-solutions.webp",
+    description: "Ensure high-quality prints with our end-to-end printing services. From brochures to business cards, we offer seamless print solutions.",
+    link: "/services/print-solutions",
+  },
+  {
+    title: "Professional Photography",
+    image: "/images/photography.webp",
+    description: "Capture stunning visuals that define your brand. Our professional photography services enhance brand storytelling and engagement.",
+    link: "/services/photography",
+  },
+  {
+    title: "Public Relations & Media",
+    image: "/images/pr.webp",
+    description: "Shape public perception with strategic PR campaigns. We craft compelling narratives that build trust and enhance brand reputation.",
+    link: "/services/pr",
+  },
 ];
 
 export const Services = () => {
-    const [activeService, setActiveService] = useState(0);
-    const [isInteracted, setIsInteracted] = useState(false);
-    const [isInView, setIsInView] = useState(false);
+  const sectionRef = useRef(null);
+  const [activeIndex, setActiveIndex] = useState(0);
+  const cardsRef = useRef([]);
 
-    const handleClick = (index) => {
-        setActiveService(index);
-        setIsInteracted(true);
+  useEffect(() => {
+    // Responsive perspective for mobile
+    const isMobile = window.matchMedia('(max-width: 900px)').matches;
+    cardsRef.current.forEach((card, index) => {
+      gsap.to(card, {
+        scrollTrigger: {
+          trigger: card,
+          start: "top 150%",
+          end: "top 75%",
+          scrub: true,
+          markers: false, // set to true for debugging
+          onUpdate: (self) => {
+            // Update active index based on scroll position
+            if (self.progress > 0.5) {
+              setActiveIndex(index);
+            }
+          }
+        },
+        opacity: 1,
+        y: 0,
+        rotationX: isMobile ? 0 : 0,
+        transformOrigin: "top center",
+        transformPerspective: isMobile ? 1200 : 800,
+        ease: "none"
+      });
+
+      // Set initial state
+      gsap.set(card, {
+        opacity: 1,
+        y: 100,
+        rotationX: isMobile ? 0 : 90,
+        transformPerspective: isMobile ? 1200 : 800
+      });
+    });
+
+    // Clean up ScrollTrigger instances on unmount
+    return () => {
+      ScrollTrigger.getAll().forEach(trigger => trigger.kill());
     };
+  }, []);
 
-    const handlePrevious = () => {
-        setActiveService((prev) => (prev === 0 ? servicesData.length - 1 : prev - 1));
-        setIsInteracted(true);
-    };
-
-    const handleNext = () => {
-        setActiveService((prev) => (prev + 1) % servicesData.length);
-        setIsInteracted(true);
-    };
-
-    useEffect(() => {
-        if (isInteracted || !isInView) return;
-
-        const interval = setInterval(() => {
-            setActiveService((prev) => (prev + 1) % servicesData.length);
-        }, 3000);
-
-        return () => clearInterval(interval);
-    }, [isInteracted, isInView]);
-
-    useEffect(() => {
-        const handleScroll = () => {
-            const servicesElement = document.querySelector('.services-wrapper');
-            const rect = servicesElement.getBoundingClientRect();
-            setIsInView(rect.top >= 0 && rect.bottom <= window.innerHeight);
-        };
-
-        window.addEventListener('scroll', handleScroll);
-        handleScroll(); // Initial check
-
-        return () => window.removeEventListener('scroll', handleScroll);
-    }, []);
-
-    return (
-        <div className="services-wrapper full-width">
-            <div className="services-navigation">
-                <button onClick={handlePrevious} className='callback-button' aria-label='previous'><FontAwesomeIcon icon={faArrowLeft} /></button>
+  return (
+    <section className="services-section" ref={sectionRef}>
+      <div className="services-header">
+        <h2 className="services-heading">Our Expertise</h2>
+        <p className="services-subtext">
+          Discover our range of professional services designed to elevate your brand.
+        </p>
+      </div>
+      <div className="services-container">
+        <div className="service-cards-wrapper">
+          {servicesData.map((service, index) => (
+            <div
+              ref={el => cardsRef.current[index] = el}
+              
+              className={`service-card-link clickable ${index === activeIndex ? 'active' : ''}`}
+              key={index}
+              style={{
+                '--card-index': index,
+                position: 'sticky',
+                top: `calc(6rem + 60px + (${index} * 15px))`
+              }}
+            >
+              <div className="service-card horizontal-card">
+                <div className="service-card-image large-left-image">
+                  <img src={service.image} alt={service.title} loading="lazy" />
+                </div>
+                <div className="service-card-content right-content">
+                  <h3 className="service-card-title">{service.title}</h3>
+                  <p className="service-card-description">{service.description}</p>
+                  <Link to={service.link} className="service-card-link-button">
+                    Learn More 
+                   
+                  </Link>
+                </div>
+              </div>
             </div>
-            <div className="services">
-                {servicesData.map((service, index) => (
-                    <div
-                        key={index}
-                        className={`service ${activeService === index ? "active" : ""}`}
-                        onClick={() => handleClick(index)}
-                    >
-                        <div className="service-image">
-                            <img src={service.image} alt={service.title} />
-                        </div>
-                        <div className="service-title">
-                            {activeService === index ? (
-                                <a href={service.link} className='clickable' style={{color: "#3eb8a2"}}>{service.title}</a>
-                            ) : (
-                                service.title
-                            )}
-                        </div>
-                        <div
-                            className="service-description"
-                            style={{ fontSize: activeService === index ? "1rem" : "0rem" }}
-                        >
-                            {service.description}
-                        </div>
-                    </div>
-                ))}
-            </div>
-
-            <button onClick={handleNext} className='callback-button' aria-label='next'><FontAwesomeIcon icon={faArrowRight} /></button>
+          ))}
+          <div className='service-cards-wrapper-overlay'></div>
         </div>
-    );
+      </div>
+    </section>
+  );
 };

@@ -3,7 +3,7 @@
     
     {
       "id": 3,
-      "image": "https://backend.creo-elements.com/wp-content/uploads/2024/10/Smasher-Logo-NoBg.png",
+      "image": "https://creo-elements.com/blogs/wp-content/uploads/2025/05/Smasher-Logo-NoBg.png",
       "content": {
         "title": "DB Smashers (Hong Kong)",
         "name": "Lokesh",
@@ -14,7 +14,7 @@
     
     {
       "id": 4,
-      "image": "https://backend.creo-elements.com/wp-content/uploads/2024/06/Nypeas.jpeg",
+      "image": "https://creo-elements.com/blogs/wp-content/uploads/2025/05/Nypeas.jpeg",
       "content": {
         "title": "NYPEAS (New York)",
         "name": "Vimmi Shroff & Jennifer Brozost",
@@ -25,7 +25,7 @@
     
     {
       "id": 8,
-      "image": "https://backend.creo-elements.com/wp-content/uploads/2023/03/ST.jpg",
+      "image": "https://creo-elements.com/blogs/wp-content/uploads/2025/05/ST.jpg",
       "content": {
         "title": "The InnerShift",
         "name": "Sweta Thakkar",
@@ -35,42 +35,12 @@
     },
     {
       "id": 1,
-      "image": "https://backend.creo-elements.com/wp-content/uploads/2024/11/447681857_1227150918248993_7065284414701284181_n.jpg",
+      "image": "https://creo-elements.com/blogs/wp-content/uploads/2025/05/447681857_1227150918248993_7065284414701284181_n-1.jpg",
       "content": {
         "title": "Natasha Ramchandani (dental clinic)",
         "name": "Natasha Ramchandani",
         "designation": "Dentist",
         "text": "We were very happy with the excellent service provided. Your team was incredibly helpful and offered innovative ideas. We appreciate your efficiency and prompt responses. Your expertise in social media is evident."
-      }
-    },
-    {
-      "id": 2,
-      "image": "https://backend.creo-elements.com/wp-content/uploads/2023/07/COOLLAB_LOGO.png",
-      "content": {
-        "title": "The CoollaB project",
-        "name": "Arwindaksh Tiwari",
-        "designation": "Proprietor",
-        "text": "As a startup, we were looking at an affordable digital solution to create brand awareness, and Creo Elements delivered us the campaign to the letter T! These guys are equipped not only with the right tools that we needed as a fresh company dipping our toes into our domain, but with these guys beside us, we are more than confident for our future Collab projects and we look forward to their infectious energies!"
-      }
-    },
-    {
-      "id": 5,
-      "image": "https://backend.creo-elements.com/wp-content/uploads/2023/07/Doodlz.png",
-      "content": {
-        "title": "Doodlz",
-        "name": "Rohan",
-        "designation": "",
-        "text": "Looking at our requirements to run our digital launch campaigns, we came across Creo Elements and our first meeting gave us the impression that these are the right fit because of their thorough professional, no-nonsense approach and took pains to come up with solutions that were beyond the reference we had."
-      }
-    },
-    {
-      "id": 6,
-      "image": "https://backend.creo-elements.com/wp-content/uploads/2023/07/Project-Co.png",
-      "content": {
-        "title": "Project Co.",
-        "name": "",
-        "designation": "",
-        "text": "Our company has a very direct approach to our clients' needs being translated into visual results. These guys are not good but great at what they do as they have a great team that knows a thorough professional approach. We are more than happy because our turnaround has improved since we have partnered with Creo Elements."
       }
     }
   ]

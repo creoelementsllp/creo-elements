@@ -97,6 +97,13 @@
         padding-top: 50px;
         padding-bottom: 50px;
     }
+    .services-box {
+        display: flex;
+        flex-direction: column;
+        align-content: center;
+        align-items: center;
+        justify-content: center;
+    }
     
     .service-page .service-image {
         width: 100%;

@@ -6,21 +6,22 @@
   position: relative;
 }
 
-.text-wrapper h2 {
+.text-wrapper h1 , .text-wrapper .wave-text {
   z-index: 4;
   color: #000;
   white-space: nowrap;
   position: absolute;
   margin: 0px;
+  font-weight: 600;
 }
 
-.text-wrapper h2:nth-child(1) {
+.text-wrapper h1:nth-child(1) {
   color: transparent;
   -webkit-text-stroke: 1px #3eb8a2;
 
 }
 
-.text-wrapper h2:nth-child(2) {
+.text-wrapper .wave-text {
   color: #3eb8a2;
   animation: wave 4s ease-in-out infinite;
   -webkit-text-stroke: 1px #3eb8a2;

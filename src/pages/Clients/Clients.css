@@ -40,8 +40,8 @@ img.client-logo {
         padding-bottom: 50px;
     }
     img.client-logo {
-        min-width: 65px;
-        min-height: 65px;
+        min-width: calc(21.25vw - 10px);
+        min-height: calc(21.25vw - 10px);
         width: 65px;
         height: 65px;
         object-fit: contain;

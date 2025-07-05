@@ -1,5 +1,6 @@
 import subprocess
-import sys
+import os
+
 
 def run_production(commit_message):
     # Full path to npm (replace with the actual path from 'where npm')
@@ -9,7 +10,7 @@ def run_production(commit_message):
     subprocess.run([npm_path, 'run', 'build'], check=True)
 
     # Change directory to 'react'
-    subprocess.run(['cd', 'react'], shell=True, check=True)
+    os.chdir('./react')  # Change the current working directory
 
     # Stage all changes
     subprocess.run(['git', 'add', '.'], check=True)
@@ -24,10 +25,11 @@ def run_production(commit_message):
     subprocess.run(['git', 'status'], check=True)
 
 if __name__ == '__main__':
-    # Ensure a commit message is provided as an argument
-    if len(sys.argv) < 2:
-        print("Usage: python production.py 'Your commit message'")
-        sys.exit(1)
+    # Prompt the user for a commit message
+    commit_message = input("Enter your commit message: ")
 
-    commit_message = sys.argv[1]
+    if not commit_message:
+        print("Commit message cannot be empty.")
+        exit(1)
+
     run_production(commit_message)
