@@ -8,7 +8,6 @@ import { fas } from '@fortawesome/free-solid-svg-icons'
 import { faTwitter, faFontAwesome, faInstagram } from '@fortawesome/free-brands-svg-icons'
 library.add(fas, faTwitter, faFontAwesome, faInstagram)
 
-
 export const Header = () => {
 
   // Use vanilla JS to toggle the menu
@@ -48,6 +47,7 @@ export const Header = () => {
           </li>
           <li className="menu-items has-sub-menu">
             <span>What We Do</span>
+            <div className="sub-menu-container">
             <ul className="sub-menu">
               <li className="sub-menu-items"><Link to="/services/social-media" className="clickable">Social Media</Link></li>
               <li className="sub-menu-items"><Link to="/services/web-development" className="clickable">Web Design / Development</Link></li>
@@ -61,6 +61,7 @@ export const Header = () => {
               <li className="sub-menu-items"><Link to="/services/photography" className="clickable">Photography</Link></li>
               <li className="sub-menu-items"><Link to="/services/pr" className="clickable">Public Relations (PR)</Link></li>
             </ul>
+            </div>
           </li>
           <li className="menu-items">
             <Link to="/about" className="clickable">About Us</Link>

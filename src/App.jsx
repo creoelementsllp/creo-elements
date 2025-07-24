@@ -18,6 +18,9 @@ import { BlogList } from './pages/Blogs/BlogList';
 import { Member } from './pages/Team/Member'
 import { ClientPage } from './pages/Clients/Clients'
 import NotFound from "./pages/NotFound/NotFound";
+import Experiment from './components/Experiment';
+import ExperimentHeader from './components/ExperimentHeader';
+
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { library } from '@fortawesome/fontawesome-svg-core'
@@ -100,6 +103,7 @@ function App() {
         <Route path="/blog/:blogId" element={<BlogDetail />} />
         <Route path="/services/:serviceSlug" element={<Service />} />
         <Route path="/team/:memberSlug" element={<Member />} />
+        <Route path="/experiment" element={<ExperimentHeader />} />
         <Route path="*" element={<NotFound />} />
       </Routes>
 
