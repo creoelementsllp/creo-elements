@@ -8,7 +8,7 @@ export default defineConfig(({ command }) => {
   return {
     base: isBuild ? '/react/build/' : '/', // Use '/react/build/' for production, '/' for dev
     build: {
-      outDir: isBuild ? 'C:/Users/vinay/OneDrive/Desktop/React Trials/creo-elements/react/build' : 'dist', // Change the output directory only for production
+      outDir: isBuild ? 'F:/rohit-react/creo-elements/react/build' : 'dist', // Change the output directory only for production
     },
     plugins: [react()], // Add the React plugin here
     

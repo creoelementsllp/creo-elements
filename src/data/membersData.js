@@ -23,23 +23,23 @@ const membersData =[
   "slug": "vinay"
 }
 ,
-  {
-    "name": "Mihika",
-    "designation": "",
-    "description": "A curious mind with a camera in one hand and a sketchbook in the other, Mihika is a communication designer who thrives on turning chaos into compelling stories. With a love for photography, branding, UI/UX, and filmmaking, she brings a vibrant energy to every project—infusing creativity, precision, and just the right amount of edge. Always ready to explore, experiment, and evolve.",
-    "meta_description": "Mihika is a communication designer blending photography, branding, UI/UX & film to craft creative, compelling stories from chaos with style and precision.",
-    "image": "/images/Mihika.png",
-    "slug": "mihika"
-  },{
-  "name": "Siddhi",
-  "designation": "",
-  "description": "Siddhi approaches the web like a craft—carefully, curiously, and always with intent. With a growing toolkit and a natural feel for what makes a website work, she brings quiet focus and thoughtful energy to every layout she shapes. Eager to experiment and refine, she’s quickly becoming a dependable hand in turning design into experience.",
-  "meta_description": "Siddhi builds thoughtful, user-focused web interfaces at Creo Elements LLP, with clarity, care, and curiosity.",
-  "image": "/images/Siddhi.png",
-  "slug": "siddhi"
+  // {
+  //   "name": "Mihika",
+  //   "designation": "",
+  //   "description": "A curious mind with a camera in one hand and a sketchbook in the other, Mihika is a communication designer who thrives on turning chaos into compelling stories. With a love for photography, branding, UI/UX, and filmmaking, she brings a vibrant energy to every project—infusing creativity, precision, and just the right amount of edge. Always ready to explore, experiment, and evolve.",
+  //   "meta_description": "Mihika is a communication designer blending photography, branding, UI/UX & film to craft creative, compelling stories from chaos with style and precision.",
+  //   "image": "/images/Mihika.png",
+  //   "slug": "mihika"
+  // }
+
+{
+  "name":"Virali",
+  "designation":"",
+  "description":"A curious mind with a strategy deck in one hand and a mood board in the other, Virali Shah is a Social Media Manager who transforms digital noise into compelling brand narratives.She brings a vibrant energy to every project, combining creative execution with precision-based strategy to fundamentally change your social media game. If you need an authoritative online presence that attracts clients and truly evolves, Virali is ready to make it happen.",
+  "meta_description":"",
+  "image":"/images/Virali.png",
+  "slug":"virali"
 }
-
-
 ,
   {
     "name": "Aditya",
@@ -81,6 +81,15 @@ const membersData =[
     "image": "/images/Aditya-s.png",
     "slug": "additya"
   },
+  {
+  "name": "Siddhi",
+  "designation": "",
+  "description": "Siddhi approaches the web like a craft—carefully, curiously, and always with intent. With a growing toolkit and a natural feel for what makes a website work, she brings quiet focus and thoughtful energy to every layout she shapes. Eager to experiment and refine, she’s quickly becoming a dependable hand in turning design into experience.",
+  "meta_description": "Siddhi builds thoughtful, user-focused web interfaces at Creo Elements LLP, with clarity, care, and curiosity.",
+  "image": "/images/Siddhi.png",
+  "slug": "siddhi"
+},
+
   // {
   //   "name": "Anand",
   //   "designation": "",
@@ -89,6 +98,27 @@ const membersData =[
   //   "image": "/images/Anand.webp",
   //   "slug": "anand"
   // }
+
+  {
+    "name": "Rohit",
+    "designation": "",
+    "description":"Rohit approaches web design with curiosity and care, blending creativity with a growing technical edge. As a Web Design Intern, he's learning the art of shaping ideas into clean, functional experiences that feel effortless to use. With a sharp eye for detail and a genuine eagerness to learn, Rohit is steadily building his place in the digital craft one thoughtful pixel at a time.",
+    "meta_description":"Rohit Vemula, a Web Design Intern, combines creativity and technical skill to craft clean, user-friendly digital experiences with attention to detail and a passion for learning.",
+    "image":"/images/Rohit.png",
+    "slug":"rohit"
+
+  },
+   {
+    "name": "Gaurav",
+    "designation": "",
+    "description":"Gaurav is a junior graphic designer who turns brand ideas into compelling design language. He bring fresh energy and precision to every creative brief. From social media assets to campaign visuals, Gaurav approaches  project as a collaborative canvas—refining layouts, experimenting with tone, and crafting designs that resonate. Their work blends emotional impact with technical finesse, helping brands speak with clarity, style, and authenticity.",
+    "meta_description":"Gaurav, a junior graphic designer, transforms brand ideas into impactful visuals with creativity, precision, and a blend of emotional depth and technical finesse.",
+    "image":"/images/Gaurav.png",
+    "slug":"gaurav"
+  }
+
+
+
 ];
   
   export default membersData;
