@@ -183,6 +183,10 @@ export const logos2 = [
     name: "360South",
     url: 'https://creo-elements.com/blogs/wp-content/uploads/2025/05/360South.png'
   }, //360South
+  {
+    name: "TreatFully Yours",
+    url: 'https://creo-elements.com/blogs/wp-content/uploads/2026/05/TreatfullYoursLogo.jpeg'
+  }, //360South
 ];
 
 export const Clients = () => {
